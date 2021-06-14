@@ -70,4 +70,9 @@ Para luego crear un prototipo de flujo en el que pudiésemos observar la dinámi
 
 ## 4. Prototipo de alta fidelidad
 
+
+![Prototipo alta fidelidad 1](imagenesProyecto/readme/Prototipo%20figma%201.png)
+![Prototipo alta fidelidad 2](imagenesProyecto/readme/Prototipo%20figma%202.png)
+![Prototipo alta fidelidad 3](imagenesProyecto/readme/Prototipo%20figma%203.png)
+
 ## 5. Test de usabilidad
