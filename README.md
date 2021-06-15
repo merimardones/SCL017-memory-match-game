@@ -42,11 +42,12 @@ A continuación te dejamos las dos historias de usuario, los criterios de acepta
 * Criterios de aceptación y definición de terminado - Usuario 1
 ![Criterios de aceptación usuario 1](imagenesProyecto/readme/Criterio_y_definici%C3%B3n_2.png)
 
+
 * Historia de usuario II
 ![Historia de usuario 2](imagenesProyecto/readme/Historia_de_usuario_2.png)
 
-* Criterios de aceptación y definición de terminado -Usuario 2
 
+* Criterios de aceptación y definición de terminado -Usuario 2
 ![Criterios de aceptación usuario 2](imagenesProyecto/readme/Criterios_y_definici%C3%B3n_1.png)
 
 /*AQUÍ HAY QUE ESCRIBIR LA DEFINICIÓN DE TERMINADO ÚNICO QUE CREAMOS CON LAS DOS DEFINICIONES QUE TENEMOS, HAY QUE MEZCLARLOS */
