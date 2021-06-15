@@ -70,4 +70,13 @@ Para luego crear un prototipo de flujo en el que pudiésemos observar la dinámi
 
 ## 4. Prototipo de alta fidelidad
 
+Realizamos el prototipo de alta fidelidad en la herramienta de diseño Figma, donde podemos ver graficamente el diseño y funcionalidad del juego, además la interactividad de la pagina con el usuario.
+
+* Prototipo de alta fidelidad I
+![Prototipo alta fidelidad 1](imagenesProyecto/readme/Prototipo%20figma%201.png)
+* Prototipo de alta fidelidad II
+![Prototipo alta fidelidad 2](imagenesProyecto/readme/Prototipo%20figma%202.png)
+* Prototipo de alta fidelidad III
+![Prototipo alta fidelidad 3](imagenesProyecto/readme/Prototipo%20figma%203.png)
+
 ## 5. Test de usabilidad
