@@ -1,1 +1,10 @@
-
+body {
+    background-image: url("Design/background\ \(tamaño\).png");
+    background-color: #cb000a;
+    background-size: 1050px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.Logo {
+    width: 35%;
+}
