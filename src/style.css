@@ -1,1 +1,8 @@
+body{
+    background-color: #cb000a;     
+}
 
+.root img{
+    max-width: 100%;
+    height: auto;
+}
