@@ -1,10 +1,8 @@
-body {
-    background-image: url("Design/background\ \(tamaño\).png");
-    background-color: #cb000a;
-    background-size: 1050px;
-    background-repeat: no-repeat;
-    background-position: center;
+body{
+    background-color: #cb000a;     
 }
-.Logo {
-    width: 35%;
+
+.root img{
+    max-width: 100%;
+    height: auto;
 }
