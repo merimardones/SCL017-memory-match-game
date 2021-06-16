@@ -80,4 +80,18 @@ Realizamos el prototipo de alta fidelidad en la herramienta de diseño Figma, do
 * Prototipo de alta fidelidad III
 ![Prototipo alta fidelidad 3](imagenesProyecto/readme/Prototipo%20figma%203.png)
 
+Además, para poder realizar nuestra aplicación con diseño responsivo o *responsive* decidimos crear una versión de nuestro juego para dispositivos móviles. En esta oportunidad realizamos una versión para pantalla de celular Android, ya que es el sistema más usado en Chile.
+
+Así es como luce nuestra versión para dispositivo móviles Android
+
+* Página de introducción
+![Prototipo de alta fidelidad 1 para celulares](imagenesProyecto/readme/protomobile.png) 
+
+* Juego de cartas 
+![Prototipo de alta fidelidad 2 para celulares](imagenesProyecto/readme/protomobile2.png) 
+
+* Mensaje de finalización del juego
+![Prototipo de alta fidelidad 3 para celulares](imagenesProyecto/readme/protomobile3.png) 
+
+
 ## 5. Test de usabilidad
