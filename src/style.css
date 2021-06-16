@@ -1,8 +1,35 @@
 body{
-    background-color: #cb000a;     
+    background-image: url("Design/background.png");
+    background-size: 830px;
+    background-repeat: no-repeat;
+    background-color: #cb000a;   
+    background-position:top;  
 }
 
 .root img{
     max-width: 100%;
     height: auto;
+}
+
+.Logo {
+    position: absolute;
+    left: 480PX;
+    top: 100px;
+    max-width: 300px;
+}
+
+.Pikachu {
+    position: absolute;
+    left: 550PX;
+    top: 270px;
+    width: 120px;
+}
+
+.start {
+    background-size: 150px;
+    position: absolute;
+    left: 550PX;
+    top: 355px;
+    width: 150px;
+    height: 60px;
 }
