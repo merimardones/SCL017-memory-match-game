@@ -85,13 +85,13 @@ Además, para poder realizar nuestra aplicación con diseño responsivo o *respo
 Así es como luce nuestra versión para dispositivo móviles Android
 
 * Página de introducción
-![Prototipo de alta fidelidad 1 para celulares](imagenesProyecto/readme/protomobile.png) 
+![Prototipo de alta fidelidad 1 para celulares](imagenesProyecto/readme/ProtoMobile.png) 
 
 * Juego de cartas 
-![Prototipo de alta fidelidad 2 para celulares](imagenesProyecto/readme/protomobile2.png) 
+![Prototipo de alta fidelidad 2 para celulares](imagenesProyecto/readme/ProtoMobile2.png) 
 
 * Mensaje de finalización del juego
-![Prototipo de alta fidelidad 3 para celulares](imagenesProyecto/readme/protomobile3.png) 
+![Prototipo de alta fidelidad 3 para celulares](imagenesProyecto/readme/ProtoMobile3.png) 
 
 
 ## 5. Test de usabilidad
