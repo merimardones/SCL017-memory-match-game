@@ -19,17 +19,17 @@ console.log(pokemonCards);
 
 const App = () => {
   const container = document.createElement('div');
+  container.className = 'container'
   
   const containerLogo = document.createElement('div');
   containerLogo.className = 'Logo';
   container.appendChild(containerLogo);
 
-  const subContainer = document.createElement('section');
+  const subContainer = document.createElement('div');
   subContainer.className = 'start';
-  /*subContainer.setAttribute("src", "Design/start.png")*/
-  /*start.src= 'Desing/start.png';*/
   /*subContainer.addEventListener('click',play);*/
   container.appendChild(subContainer);
+  
   return container;
 
  /* const el = document.createElement('img');
