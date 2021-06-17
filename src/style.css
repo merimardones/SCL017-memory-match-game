@@ -4,6 +4,7 @@ body{
     background-repeat: no-repeat;
     background-color: #cb000a;   
     background-position:top;  
+    
 }
 
 .root img{
@@ -12,15 +13,16 @@ body{
 }
 
 .Logo {
-    position: absolute;
+    position:relative;
     left: 480PX;
     top: 100px;
+    bottom: 200px;
     max-width: 300px;
 }
 
 .Pikachu {
-    position: absolute;
-    left: 550PX;
+    position:absolute;
+    left: 700PX;
     top: 270px;
     width: 120px;
 }
