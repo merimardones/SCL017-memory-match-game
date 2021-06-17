@@ -14,14 +14,28 @@
 //   .catch(console.error);
 //
 
+import pokemonCards from '../data/pokemonCards/pokemonCards.js';
+console.log(pokemonCards);
+
 const App = () => {
-  const el = document.createElement('img');
+  const container = document.createElement('div');
+  const header = document.createElement('header');
+  header.className = 'header';
+  container.appendChild(header);
+
+  const subContainer = document.createElement('section');
+  subContainer.className = 'start';
+  /*subContainer.setAttribute("src", "Design/start.png")*/
+  /*start.src= 'Desing/start.png';*/
+  /*subContainer.addEventListener('click',play);*/
+  container.appendChild(subContainer);
+  return container;
+
+ /* const el = document.createElement('img');
   el.setAttribute("src", "Design/pikachu.gif");
   el.setAttribute("class", "Pikachu")
   document.body.appendChild(el);
-  /*el.className = 'App';
-  el.textContent = Image */
-  return el;
+  return el;*/
 };
 
 export default App;

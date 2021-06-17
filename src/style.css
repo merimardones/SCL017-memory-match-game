@@ -1,6 +1,6 @@
 body{
     background-image: url("Design/background.png");
-    background-size: 1070px;
+    background-size: 830px;
     background-repeat: no-repeat;
     background-color: #cb000a;   
     background-position:top;  
@@ -22,15 +22,16 @@ body{
 
 .Pikachu {
     position:absolute;
-    left: 700PX;
+    left: 550PX;
     top: 270px;
     width: 120px;
 }
 
 .start {
+    background-image: url(Design/start.png);
     background-size: 150px;
     position: absolute;
-    left: 550PX;
+    left: 400PX;
     top: 355px;
     width: 150px;
     height: 60px;
