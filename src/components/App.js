@@ -19,9 +19,10 @@ console.log(pokemonCards);
 
 const App = () => {
   const container = document.createElement('div');
-  const header = document.createElement('header');
-  header.className = 'header';
-  container.appendChild(header);
+  
+  const containerLogo = document.createElement('div');
+  containerLogo.className = 'Logo';
+  container.appendChild(containerLogo);
 
   const subContainer = document.createElement('section');
   subContainer.className = 'start';
@@ -32,7 +33,7 @@ const App = () => {
   return container;
 
  /* const el = document.createElement('img');
-  el.setAttribute("src", "Design/pikachu.gif");
+  el.setAttribute("src", "../Design/pikachu.gif");
   el.setAttribute("class", "Pikachu")
   document.body.appendChild(el);
   return el;*/
