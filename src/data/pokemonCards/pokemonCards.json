@@ -3,47 +3,47 @@
   "items": [
     {
       "id": "Bulbasaur",
-      "image": "'imagenesProyecto/Cartas/Bulbasaur.png'",
-      "bgColor": "#339933"
+      "image": "data/pokemonCards/Cards/Bulbasaur.png",
+      "bgColor": "#ffffff"
     },
     {
       "id": "Charmander",
-      "image": "'imagenesProyecto/Cartas/Charmander.png'",
-      "bgColor": "#339933"
+      "image": "'data/pokemonCards/Cards/Charmander.png'",
+      "bgColor": "#ffffff"
     },
     {
       "id": "Onix",
-      "image": "imagenesProyecto/Cartas/Onix.png",
-      "bgColor": "#339933"
+      "image": "data/pokemonCards/Cards/Onix.png",
+      "bgColor": "#ffffff"
     },
     {
       "id": "Pidgey",
-      "image": "imagenesProyecto/Cartas/Pidgey.png",
-      "bgColor": "#F05032"
+      "image": "data/pokemonCards/Cards/Pidgey.png",
+      "bgColor": "#ffffff"
     },
     {
       "id": "Pikachu",
-      "image": "imagenesProyecto/Cartas/Pikachu.png",
-      "bgColor": "#F05032"
+      "image": "data/pokemonCards/Cards/Pikachu.png",
+      "bgColor": "#ffffff"
     },
     {
       "id": "Psyduck",
-      "image": "imagenesProyecto/Cartas/Psyduck.png'",
-      "bgColor": "#F05032"
+      "image": "data/pokemonCards/Cards/Psyduck.png",
+      "bgColor": "#ffffff"
     },
     {
       "id": "Snorlax",
-      "image": "imagenesProyecto/Cartas/Snorlax.png",
-      "bgColor": "#1572B6"
+      "image": "data/pokemonCards/Cards/Snorlax.png",
+      "bgColor": "#ffffff"
     },
     {
       "id": "Squirtle",
-      "image": "imagenesProyecto/Cartas/Squirtle.png",
-      "bgColor": "#1572B6"
+      "image": "data/pokemonCards/Cards/Squirtle.png",
+      "bgColor": "#ffffff"
     },
     {
       "id": "Staryu",
-      "image": "imagenesProyecto/Cartas/Staryu.png",
+      "image": "data/pokemonCards/Cards/Staryu.png",
       "bgColor": "#ffffff"
     }
   ]
