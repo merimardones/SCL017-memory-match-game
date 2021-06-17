@@ -1,5 +1,4 @@
-import primeraPantalla from './components/App.js';
+import App from './components/App.js';
 
-document.getElementById('root').appendChild(primeraPantalla());
-
+document.getElementById('root').appendChild(App());
  
