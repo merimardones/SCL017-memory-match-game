@@ -15,11 +15,12 @@
 //
 
 const App = () => {
-  const el = document.createElement('div');
-
-  el.className = 'App';
-  el.textContent = 'Hola mundo!';
-
+  const el = document.createElement('img');
+  el.setAttribute("src", "Design/pikachu.gif");
+  el.setAttribute("class", "Pikachu")
+  document.body.appendChild(el);
+  /*el.className = 'App';
+  el.textContent = Image */
   return el;
 };
 
