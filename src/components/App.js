@@ -15,9 +15,13 @@
 //
 
 const App = () => {
-  
-
-  return ;
+  const el = document.createElement('img');
+  el.setAttribute("src", "Design/pikachu.gif");
+  el.setAttribute("class", "Pikachu")
+  document.body.appendChild(el);
+  /*el.className = 'App';
+  el.textContent = Image */
+  return el;
 };
 
 export default App;
