@@ -4,14 +4,14 @@ console.log(pokemonCards);
 
 const Starting = () => {
 
-// Aquí se parte por el play al botón y luego están los divs para la pantalla principal
-    
-
-      const startBtn = () => {
+// evento para ocultar el container 
+        const startBtn = () => {
+        
         document.getElementsByClassName('container');
         container.style.display = 'none';
+        
   } 
-
+// divs creados con htlm dinámicos
   const container = document.createElement('div');
   container.className = 'container'; // container padre
   
@@ -31,27 +31,5 @@ const Starting = () => {
   return container;
 };
   
-   
-
-  
- 
-
- /*const modalPlay = document.createElement('div');
- const play = document.createElement('div');
- play.className = 'modaljuego';
- /*funcion para abrir un modal desde aqui
- modalPlay.appendChild(play) */
-
-
-
-
-
-
-
-
-
-
-
-
 
 export default Starting;
