@@ -5,7 +5,7 @@
 
 body{
     height: 100vh;
-    background-image: url("../Design/background.png");
+    background-image: url("./Design/background.png");
     background-size: 67%;
     background-repeat: no-repeat;
     background-color: #cb000a;   
@@ -19,7 +19,7 @@ body{
 }
 
 .Logo {
-    background-image: url("../Design/memory\ dex\ pokemon.png");
+    background-image: url("./Design/memory\ dex\ pokemon.png");
     padding: 10%;
     background-size: contain;
     background-repeat: no-repeat;  
@@ -29,7 +29,7 @@ body{
 }
 
 .Pikachu {
-    background-image: url("../Design/pikachu.gif");
+    background-image: url("./Design/pikachu.gif");
     padding: 5%;
     background-size: contain;
     background-repeat: no-repeat;  
@@ -39,7 +39,7 @@ body{
 }
 
 .start {
-    background-image: url("../Design/start.png");
+    background-image: url("./Design/start.png");
     background-size: 150px;
     position: absolute;
     left: 44%;
@@ -47,6 +47,3 @@ body{
     width: 150px;
     height: 60px;
 }
-
-
-
