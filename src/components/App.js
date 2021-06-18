@@ -19,6 +19,7 @@ console.log(pokemonCards);
 
 const App = () => {
   const container = document.createElement('div');
+  container.className = 'container'
   
   const containerLogo = document.createElement('div');
   containerLogo.className = 'Logo';
@@ -28,19 +29,20 @@ const App = () => {
   containerPikachu.className = 'Pikachu';
   container.appendChild(containerPikachu);
 
-  const subContainer = document.createElement('section');
+  const subContainer = document.createElement('div');
   subContainer.className = 'start';
   subContainer.addEventListener('click', ()=> { 
     document.write("Hola")
    });
   container.appendChild(subContainer);
+  
+  return container;
 
-const modalPlay = document.createElement('div');
+ /*const modalPlay = document.createElement('div');
  const play = document.createElement('div');
  play.className = 'modaljuego';
- /*funcion para abrir un modal desde aqui*/
- modalPlay.appendChild(play)
-  return container;
+ /*funcion para abrir un modal desde aqui
+ modalPlay.appendChild(play) */
 };
 
 export default App;
