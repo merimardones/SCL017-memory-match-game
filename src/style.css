@@ -49,10 +49,19 @@ body{
 }
 .backgroundPlay {
     background-image: url("./Design/fondo\ pantalla\ 2.png");
-    opacity: 0.95;
     background-repeat: no-repeat;
-    background-size: 80%;
     padding: 25%;
     background-position-x: center;
     background-position-y: center;
+    transition-property: initial;
+    transition-duration: 1s;
+    opacity: 0.25;
+    background-size: 10%;
+}
+.backgroundPlay:hover {
+    transition-property: initial;
+    transition-duration: 2s;
+    opacity: 0.985;
+    background-size: 80%;
+
 }
