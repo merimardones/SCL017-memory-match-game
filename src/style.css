@@ -47,3 +47,22 @@ body{
     width: 150px;
     height: 60px;
 }
+.containerPlay {
+    background-image: url("./Design/fondo\ pantalla\ 2.png");
+    background-repeat: no-repeat;
+    padding: 25%;
+    background-position-x: center;
+    background-position-y: center;
+    transition-property: initial;
+    transition-duration: 1s;
+    opacity: 0.25;
+    background-size: 5%;
+}
+.containerPlay:hover {
+    transition-property: initial;
+    transition-duration: 2s;
+    opacity: 0.985;
+    background-size: 80%;
+
+}
+
