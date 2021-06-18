@@ -56,7 +56,7 @@ body{
     transition-property: initial;
     transition-duration: 1s;
     opacity: 0.25;
-    background-size: 5%;
+    background-size: 0%;
 }
 .containerPlay:hover {
     transition-property: initial;
