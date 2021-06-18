@@ -25,18 +25,24 @@ const App = () => {
   containerLogo.className = 'Logo';
   container.appendChild(containerLogo);
 
+  const containerPikachu = document.createElement('div');
+  containerPikachu.className = 'Pikachu';
+  container.appendChild(containerPikachu);
+
   const subContainer = document.createElement('div');
   subContainer.className = 'start';
-  /*subContainer.addEventListener('click',play);*/
+  subContainer.addEventListener('click', ()=> { 
+    document.write("Hola")
+   });
   container.appendChild(subContainer);
   
   return container;
 
- /* const el = document.createElement('img');
-  el.setAttribute("src", "../Design/pikachu.gif");
-  el.setAttribute("class", "Pikachu")
-  document.body.appendChild(el);
-  return el;*/
+ /*const modalPlay = document.createElement('div');
+ const play = document.createElement('div');
+ play.className = 'modaljuego';
+ /*funcion para abrir un modal desde aqui
+ modalPlay.appendChild(play) */
 };
 
 export default App;
