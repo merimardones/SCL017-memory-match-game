@@ -47,7 +47,7 @@ body{
     width: 150px;
     height: 60px;
 }
-.backgroundPlay {
+.containerPlay {
     background-image: url("./Design/fondo\ pantalla\ 2.png");
     background-repeat: no-repeat;
     padding: 25%;
@@ -56,12 +56,13 @@ body{
     transition-property: initial;
     transition-duration: 1s;
     opacity: 0.25;
-    background-size: 10%;
+    background-size: 5%;
 }
-.backgroundPlay:hover {
+.containerPlay:hover {
     transition-property: initial;
     transition-duration: 2s;
     opacity: 0.985;
     background-size: 80%;
 
 }
+
