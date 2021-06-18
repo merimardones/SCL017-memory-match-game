@@ -47,3 +47,12 @@ body{
     width: 150px;
     height: 60px;
 }
+.backgroundPlay {
+    background-image: url("./Design/fondo\ pantalla\ 2.png");
+    opacity: 0.95;
+    background-repeat: no-repeat;
+    background-size: 80%;
+    padding: 25%;
+    background-position-x: center;
+    background-position-y: center;
+}
