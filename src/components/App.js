@@ -1,5 +1,4 @@
-import pokemonCards from '../data/pokemonCards/pokemonCards.js';
-console.log(pokemonCards);
+
 
 import play from './PlayGame.js';
 

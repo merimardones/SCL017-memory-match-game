@@ -1,4 +1,4 @@
-{
+*{
     margin: 0 auto;
     padding: 0;
 } 
@@ -54,9 +54,12 @@ body{
     background-position-x: center;
     background-position-y: center;
     transition-property: initial;
-    transition-duration: 1s;
+    transition-duration: 0,5s;
     opacity: 0.25;
     background-size: 0%;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
 }
 .containerPlay:hover {
     transition-property: initial;
