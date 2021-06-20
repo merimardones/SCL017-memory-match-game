@@ -1,16 +1,11 @@
-import pokemonCards from '../data/pokemonCards/pokemonCards.js';
-console.log(pokemonCards);
-import play from './PlayGame.js';
+import play from './PlayGame.js';   // importamos la variable "play" para aplicarla en el boton start 
 
-const Starting = () => {
-
-// Aquí se parte por el play al botón y luego están los divs para la pantalla principal
+const Starting = () => {  // se crea el boton para comenzar a jugar
     
-
       const startBtn = () => {
-        document.getElementsByClassName('container');
-        container.style.display = 'none';
-        document.getElementById('root').appendChild(play());
+        document.getElementsByClassName('container');    //se llama a el div container
+        container.style.display = 'none';                // se esconde el div container
+        document.getElementById('root').appendChild(play());    // se llama al div root de body y se abre la variable play (codificada en PlayGame.js)
         }
         
 
@@ -33,28 +28,5 @@ const Starting = () => {
   
   return container;
 };
-  
-   
-
-  
- 
-
- /*const modalPlay = document.createElement('div');
- const play = document.createElement('div');
- play.className = 'modaljuego';
- /*funcion para abrir un modal desde aqui
- modalPlay.appendChild(play) */
-
-
-
-
-
-
-
-
-
-
-
-
 
 export default Starting;

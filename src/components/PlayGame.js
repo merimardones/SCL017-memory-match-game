@@ -1,3 +1,4 @@
+import pokemonCards from '../data/pokemonCards/pokemonCards.js';
 const play = () => {
 
  const containerPlay = document.createElement('div');

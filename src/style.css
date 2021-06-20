@@ -1,7 +1,7 @@
-/*{
+*{
     margin: 0 auto;
     padding: 0;
-} */
+} 
 
 body{
     height: 100vh;
@@ -40,12 +40,12 @@ body{
 
 .start {
     background-image: url("./Design/start.png");
-    background-size: 150px;
+    background-size: 100%;
     position: absolute;
     left: 44%;
     bottom: 32%;
-    width: 150px;
-    height: 60px;
+    width: 12%;
+    height: 10%;
 }
 .containerPlay {
     background-image: url("./Design/fondo\ pantalla\ 2.png");
@@ -57,12 +57,13 @@ body{
     transition-duration: 1s;
     opacity: 0.25;
     background-size: 0%;
+    display: flex;
 }
 .containerPlay:hover {
-    transition-property: initial;
+    transition-property: all;
     transition-duration: 2s;
     opacity: 0.985;
-    background-size: 80%;
-
+    background-size: 78%;
+    display: flex;
 }
 
