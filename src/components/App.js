@@ -1,5 +1,3 @@
-
-
 import play from './PlayGame.js';
 
 const Starting = () => {

@@ -1,5 +1,4 @@
 import pokemonCards from '../data/pokemonCards/pokemonCards.js';
-console.log(pokemonCards);
 
 
  const cards = pokemonCards.items; //array de items
@@ -35,12 +34,14 @@ console.log(pokemonCards);
 
     let cardShown = document.createElement("div");
     cardShown.className = "cardShown";
-    let cardBack = document.createElement("img");
-    cardBack.setAttribute ('src', '../Design/reverso%carta.png'); // la ruta no funciona :/
-    cardBack.addEventListener("click", function() {
+    let cardBack = document.createElement('img');
+    cardBack.className = "cardBack";
+    cardBack.setAttribute("src", "../components/reverso_carta.png");
+
+   /* cardBack.addEventListener("click", function() {
 
       chosenCard (cardsPair[i], cardBack);
-    });
+    });*/
     cardShown.appendChild(cardBack);
     containerPlay.appendChild(cardShown);
     }

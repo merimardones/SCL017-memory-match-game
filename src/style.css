@@ -1,21 +1,21 @@
 *{
-    margin: 0 auto;
+    margin: 0 ;
     padding: 0;
 } 
 
 body{
     height: 100vh;
     background-image: url("./Design/background.png");
-    background-size: 67%;
+    background-size: 65%;
     background-repeat: no-repeat;
     background-color: #cb000a;   
     background-position:center;  
+    overflow: hidden;
 }
 
 .container{
     display: flex;
     flex-wrap: wrap;
-    box-sizing: border-box;
 }
 
 .Logo {
@@ -40,32 +40,61 @@ body{
 
 .start {
     background-image: url("./Design/start.png");
-    background-size: 150px;
+    background-size: 100%;
+    background-repeat: no-repeat;
     position: absolute;
     left: 44%;
     bottom: 32%;
-    width: 150px;
-    height: 60px;
+    width: 12%;
+    height: 10%;
 }
 .containerPlay {
-    background-image: url("./Design/fondo\ pantalla\ 2.png");
+    background-color: #d5e9f5;
     background-repeat: no-repeat;
-    padding: 25%;
-    background-position-x: center;
-    background-position-y: center;
-    transition-property: initial;
-    transition-duration: 0,5s;
-    opacity: 0.25;
-    background-size: 0%;
     display: flex;
     flex-wrap: wrap;
-    box-sizing: border-box;
+    padding: 0%;
+    background-position-x: 60%;
+    background-position-y: 90%;
+    transition-property: initial;
+    transition-duration: 0,5s;
+    opacity: 0.005;
+    background-size: 0%;
+    width: 90%;
+    height: 90%;
+    align-content: center;
+    box-sizing: initial;
 }
 .containerPlay:hover {
     transition-property: initial;
     transition-duration: 2s;
-    opacity: 0.985;
-    background-size: 80%;
-
+    opacity: 0.9;
+    background-size: 82%;
+    background-position: center;
+    padding-left: 6%;
+    margin-top: 1%;
+    background-position-x: 40%;
+    background-position-y: 60%;
+    position: absolute;
+    width: 70%;
+    height: 90%;
+    place-content:initial;
+    right: 10%;
+    left: 10%;
+    border: 10px solid black;
+}
+.cardShown{
+    transition: inherit;
+    transition-property: inherit;
+    size: inherit;
+    width: 10.5%;
+    height: 4%;
+    padding: 0%;
+    margin: 2%;
+    margin-top: 1%;
 }
 
+.cardBack {
+    width: 110px;
+    height: 130px;
+}
