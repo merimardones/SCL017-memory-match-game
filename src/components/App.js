@@ -1,11 +1,13 @@
-import play from './PlayGame.js';   // importamos la variable "play" para aplicarla en el boton start 
+import play from './PlayGame.js';
 
-const Starting = () => {  // se crea el boton para comenzar a jugar
-    
-      const startBtn = () => {
-        document.getElementsByClassName('container');    //se llama a el div container
-        container.style.display = 'none';                // se esconde el div container
-        document.getElementById('root').appendChild(play());    // se llama al div root de body y se abre la variable play (codificada en PlayGame.js)
+const Starting = () => {
+
+// evento para ocultar el container 
+        const startBtn = () => {
+        
+        document.getElementsByClassName('container');
+        container.style.display = 'none';
+        document.getElementById('root').appendChild(play());
         }
         
 
@@ -28,5 +30,6 @@ const Starting = () => {  // se crea el boton para comenzar a jugar
   
   return container;
 };
+  
 
 export default Starting;
