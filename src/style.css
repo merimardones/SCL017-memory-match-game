@@ -58,7 +58,7 @@ body{
     background-position-y: 90%;
     transition-property: initial;
     transition-duration: 0,5s;
-    opacity: 0.005;
+    opacity: 0.005; 
     background-size: 0%;
     width: 90%;
     height: 90%;

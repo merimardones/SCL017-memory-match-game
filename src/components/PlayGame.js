@@ -36,7 +36,7 @@ import pokemonCards from '../data/pokemonCards/pokemonCards.js';
     cardShown.className = "cardShown";
     let cardBack = document.createElement('img');
     cardBack.className = "cardBack";
-    cardBack.setAttribute("src", "../components/reverso_carta.png");
+    cardBack.setAttribute("src", "./components/reverso_carta.png");
 
    /* cardBack.addEventListener("click", function() {
 
