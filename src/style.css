@@ -10,7 +10,7 @@ body{
     background-repeat: no-repeat;
     background-color: #cb000a;   
     background-position:center;  
-    overflow: hidden;
+    /*overflow: hidden;*/
 }
 
 .container{
@@ -50,27 +50,23 @@ body{
 }
 .containerPlay {
     background-color: #d5e9f5;
+    border: 10px solid black;
+    border-radius: 4px;
     background-repeat: no-repeat;
+    background-size: 1%;
+    padding: 0%;
+    background-position: center;
+    transition-property: background-size;
+    transition-duration: 1s;
+}
+/*.containerPlay:hover {
+    transition: initial;
+    transition-duration: 3s;
+    background-size: 82%;
+    border: 10px solid black;
     display: flex;
     flex-wrap: wrap;
-    padding: 0%;
-    background-position-x: 60%;
-    background-position-y: 90%;
-    transition-property: initial;
-    transition-duration: 0,5s;
-    opacity: 0.005; 
-    background-size: 0%;
-    width: 90%;
-    height: 90%;
-    align-content: center;
-    box-sizing: initial;
-}
-.containerPlay:hover {
-    transition-property: initial;
-    transition-duration: 2s;
-    opacity: 0.9;
-    background-size: 82%;
-    background-position: center;
+   /* background-position: center;
     padding-left: 6%;
     margin-top: 1%;
     background-position-x: 40%;
@@ -82,19 +78,19 @@ body{
     right: 10%;
     left: 10%;
     border: 10px solid black;
+}*/
+.containerGrid{
+    width: 40%;
+    display:flex;
+    flex-wrap:wrap;
 }
 .cardShown{
-    transition: inherit;
-    transition-property: inherit;
-    size: inherit;
     width: 10.5%;
     height: 4%;
-    padding: 0%;
+    padding: 5%;
     margin: 2%;
-    margin-top: 1%;
 }
-
 .cardBack {
-    width: 110px;
-    height: 130px;
+    width: 110px; /* va porcentaje */
+    height: 130px; 
 }

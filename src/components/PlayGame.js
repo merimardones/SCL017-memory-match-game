@@ -23,13 +23,13 @@ import pokemonCards from '../data/pokemonCards/pokemonCards.js';
  const containerPlay = document.createElement('div');
  containerPlay.className = 'containerPlay'; // container padre del juego
   
- /*const containerGrid = document.createElement('div');
+ const containerGrid = document.createElement('div');
  containerGrid.className = 'containerGrid'; 
- containerPlay.appendChild('containerGrid');// container donde va la división para poner las cartas */
+ containerPlay.appendChild(containerGrid);// container donde va la división para poner las cartas */
  
  const gridBoard = function(cardsPair) {
     
-    containerPlay.innerHTML = "";
+  containerGrid.innerHTML = "";
     for (let i = 0; i < cardsPair.length; i++) {
 
     let cardShown = document.createElement("div");
@@ -43,7 +43,7 @@ import pokemonCards from '../data/pokemonCards/pokemonCards.js';
       chosenCard (cardsPair[i], cardBack);
     });*/
     cardShown.appendChild(cardBack);
-    containerPlay.appendChild(cardShown);
+    containerGrid.appendChild(cardShown);
     }
   }
   gridBoard(cardsPair); //función para que las cartas (su reverso) aparezcan en pantalla dentro de Containerplay (no pude crear otro div porque se escondía todo)
