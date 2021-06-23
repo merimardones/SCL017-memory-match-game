@@ -2,6 +2,7 @@ import pokemonCards from '../data/pokemonCards/pokemonCards.js';
 
 //Array de cartas Pokémon
  const cards = pokemonCards.items; 
+
  //Array de cartas duplicadas
  const cardsPair = cards.concat(cards); 
 
@@ -15,15 +16,10 @@ import pokemonCards from '../data/pokemonCards/pokemonCards.js';
          array [j] = temporary;
      }
  }
- shuffle(cardsPair); // función shuffle para barajar las cartas
+  shuffle(cardsPair); // función shuffle para barajar las cartas
 
- /* cards = shuffle (cards); */ 
+const play = () => {
  
-  
- 
-   
- const play = () => {
- // function flipCard () 
 //-----Creación de HTML dinámico
  const containerPlay = document.createElement('div');
  containerPlay.className = 'containerPlay'; // container padre del juego
@@ -45,49 +41,28 @@ import pokemonCards from '../data/pokemonCards/pokemonCards.js';
     cardBack.setAttribute("src", "./components/reverso_carta.png"); // se crea un div para cada carta
     cardShown.appendChild(cardBack);
     
-    cardBack.addEventListener("click", () =>{
-      cardBack.setAttribute("src", cardsPair[i].image);
-    })
-
-   /* let frontCard = document.createElement('img');
-    frontCard.className = 'frontCard';
-    frontCard.src = cardsPair[i].image;
-    cardShown.appendChild(frontCard);*/
-    containerGrid.appendChild(cardShown);
-
-    }
-  
-  } 
-  gridBoard(cardsPair); 
-
-  /*let shuffleCards = shuffle( cardsPair)
-  let pickedCards :[];
-  let matchedCards: []; */
-
- /* const cardShown = document.querySelectorAll('.cardShown').addEventListener ('click', flipCard);
-  function flipCard () {
-    cardShown.classList.toggle("flipCard") 
-  } */
-
-
-
-
-  
     
-
+    cardBack.addEventListener("click", () => {
+      cardBack.setAttribute("src", cardsPair[i].image);
+    gridBoard(cardsPair); 
   
+  /*let shuffleCards = shuffle(cardsPair);
+  let matchedCards= []; 
+  let pickedCards = []; 
   
-  
+      const flipCard = (target) => {
+        if (pickedCards.length>2 && !pickedCards.includes(target) && !matchedCards.includes(target)){
+          pickedCards.push(target); 
+          target.classList.toggle('flipped');
+          if(pickedCards.length === 2) {
+        setTimeout(matchedCard, 600); */
+
+      },      
 
 
- 
-
-
-
-
-
-
+  containerGrid.appendChild(cardShown);
+ }
  return containerPlay;
-}
+  };
 
-export default play;
+export default play
