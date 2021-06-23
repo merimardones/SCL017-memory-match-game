@@ -60,26 +60,7 @@ body{
     top:1%;
     left:8%;
 }
-/*.containerPlay:hover {
-    transition: initial;
-    transition-duration: 3s;
-    background-size: 82%;
-    border: 10px solid black;
-    display: flex;
-    flex-wrap: wrap;
-   /* background-position: center;
-    padding-left: 6%;
-    margin-top: 1%;
-    background-position-x: 40%;
-    background-position-y: 60%;
-    position: absolute;
-    width: 70%;
-    height: 90%;
-    place-content:initial;
-    right: 10%;
-    left: 10%;
-    border: 10px solid black;
-}*/
+
 .containerGrid{
     width: 100%;
     display:flex;
@@ -89,6 +70,9 @@ body{
     flex-wrap:wrap;
     flex-direction: row;
     padding: 2%;
+    position: absolute;
+    top: 0.5%;
+    left: 1%;
 }
 .cardShown{
     width: 16%;
@@ -103,4 +87,23 @@ body{
     box-shadow: 0 0 12px rgba(0, 0, 0, 0.7);
     border-radius: 10%;
     border: 4px solid #000092;
+    transition: transform 1s;
+}
+.cardBack:hover {
+    box-shadow: 0 0 50px 10px rgb(255, 255, 255);
+  }
+
+@media screen and (max-width: 640px) {
+    body{
+        background-color: blanchedalmond;
+    }
+    .Logo{
+        position: absolute;
+        top: 20%;
+    }
+    .Pikachu{
+        position: absolute;
+        top: 40%;
+    }
+
 }

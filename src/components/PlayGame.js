@@ -13,7 +13,7 @@ import pokemonCards from '../data/pokemonCards/pokemonCards.js';
      }
  }
  shuffle(cardsPair); // función shuffle para barajar las cartas
- 
+
  /* cards = shuffle (cards); */ 
  
   
@@ -37,14 +37,21 @@ import pokemonCards from '../data/pokemonCards/pokemonCards.js';
     let cardBack = document.createElement('img');
     cardBack.className = "cardBack";
     cardBack.setAttribute("src", "./components/reverso_carta.png");
+    cardShown.appendChild(cardBack);
 
-   /* cardBack.addEventListener("click", function() {
+    /*let frontCard = document.createElement('img');
+    frontCard.className = 'frontCard';
+    frontCard.src = cardsPair[i].image;
+    cardShown.appendChild(frontCard);*/
 
+    /*cardBack.addEventListener("click", function() {
+      
       chosenCard (cardsPair[i], cardBack);
     });*/
-    cardShown.appendChild(cardBack);
+  
     containerGrid.appendChild(cardShown);
     }
+   // function chosenCard  ()
   }
   gridBoard(cardsPair); //función para que las cartas (su reverso) aparezcan en pantalla dentro de Containerplay (no pude crear otro div porque se escondía todo)
 
