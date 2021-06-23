@@ -33,7 +33,7 @@ import pokemonCards from '../data/pokemonCards/pokemonCards.js';
  const gridBoard = function(cardsPair) {
     
   containerGrid.innerHTML = "";
-    for (let i = 0; i < cardsPair.length; i++) {
+    for (let i = 0; i < cardsPair.length; i++) { //recorre la data
 
     let cardShown = document.createElement("div");
     cardShown.className = "cardShown";
@@ -50,11 +50,7 @@ import pokemonCards from '../data/pokemonCards/pokemonCards.js';
   let pickedCards :[];
   let matchedCards: []; */
 
-  /*const cardShown = document.querySelectorAll('.cardShown').addEventListener ('click', flipCard);
-  function flipCard () {
-    cardShown.classList.toggle("flipCard") 
-  } */
-
+ 
 
 
 
