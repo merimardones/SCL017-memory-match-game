@@ -109,4 +109,9 @@ body{
     transform: scale(.97);
     transition: transform .2s;
     scale: (1);
+    box-shadow: 0 0 40px rgba(248, 248, 248, 0.7);
+}
+
+.flipCard{
+    transform: rotateY(180deg);
 }

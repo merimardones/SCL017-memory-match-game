@@ -50,7 +50,10 @@ import pokemonCards from '../data/pokemonCards/pokemonCards.js';
   let pickedCards :[];
   let matchedCards: []; */
 
-  const flipCard = document.getElementsByClassName('cardShown').addEventListener ('click', flipCard);
+  /*const cardShown = document.querySelectorAll('.cardShown').addEventListener ('click', flipCard);
+  function flipCard () {
+    cardShown.classList.toggle("flipCard") 
+  } */
 
 
 
