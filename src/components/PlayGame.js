@@ -15,12 +15,15 @@ import pokemonCards from '../data/pokemonCards/pokemonCards.js';
          array [j] = temporary;
      }
  }
- shuffle(cardsPair); 
+ shuffle(cardsPair); // función shuffle para barajar las cartas
+
+ /* cards = shuffle (cards); */ 
  
- /*cards = shuffle (cardsPair); */ 
+  
  
    
  const play = () => {
+ // function flipCard () 
 //-----Creación de HTML dinámico
  const containerPlay = document.createElement('div');
  containerPlay.className = 'containerPlay'; // container padre del juego
@@ -41,8 +44,19 @@ import pokemonCards from '../data/pokemonCards/pokemonCards.js';
     cardBack.className = "cardBack";
     cardBack.setAttribute("src", "./components/reverso_carta.png"); // se crea un div para cada carta
     cardShown.appendChild(cardBack);
-    containerGrid.appendChild(cardShown);   
+    
+    cardBack.addEventListener("click", () =>{
+      cardBack.setAttribute("src", cardsPair[i].image);
+    })
+
+   /* let frontCard = document.createElement('img');
+    frontCard.className = 'frontCard';
+    frontCard.src = cardsPair[i].image;
+    cardShown.appendChild(frontCard);*/
+    containerGrid.appendChild(cardShown);
+
     }
+  
   } 
   gridBoard(cardsPair); 
 
@@ -50,7 +64,11 @@ import pokemonCards from '../data/pokemonCards/pokemonCards.js';
   let pickedCards :[];
   let matchedCards: []; */
 
- 
+ /* const cardShown = document.querySelectorAll('.cardShown').addEventListener ('click', flipCard);
+  function flipCard () {
+    cardShown.classList.toggle("flipCard") 
+  } */
+
 
 
 

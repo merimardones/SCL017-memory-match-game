@@ -60,26 +60,7 @@ body{
     top:1.5%;
     left:8%;
 }
-/*.containerPlay:hover {
-    transition: initial;
-    transition-duration: 3s;
-    background-size: 82%;
-    border: 10px solid black;
-    display: flex;
-    flex-wrap: wrap;
-   /* background-position: center;
-    padding-left: 6%;
-    margin-top: 1%;
-    background-position-x: 40%;
-    background-position-y: 60%;
-    position: absolute;
-    width: 70%;
-    height: 90%;
-    place-content:initial;
-    right: 10%;
-    left: 10%;
-    border: 10px solid black;
-}*/
+
 .containerGrid{
     width: 100%;
     display:flex;
@@ -89,12 +70,16 @@ body{
     flex-wrap:wrap;
     flex-direction: row;
     padding: 2%;
+    position: absolute;
+    top: 0.5%;
+    left: 1%;
 }
 .cardShown{
     width: 16%;
     height: 0%;
     padding: 0%;
     margin: 0 0 2% 0;
+    position: relative;
 
 }
 .cardBack {
@@ -103,15 +88,38 @@ body{
     box-shadow: 0 0 12px rgba(0, 0, 0, 0.7);
     border-radius: 10%;
     border: 4px solid #000092;
+    transition: transform 1s;
+    backface-visibility: hidden;
 }
-
+.frontCard{
+    width: 60%; 
+    height: 30%; 
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.7);
+    border-radius: 10%;
+    border: 4px solid #000092;
+    transition: transform 1s;
+}
 .cardBack:hover{
     transform: scale(.97);
     transition: transform .2s;
     scale: (1);
-    box-shadow: 0 0 40px rgba(248, 248, 248, 0.7);
+    box-shadow: 0 0 50px 10px rgb(255, 255, 255);
+}
+.cardShown.flip{
+    transform: rotateY(180deg);
 }
 
-.flipCard{
-    transform: rotateY(180deg);
+@media screen and (max-width: 640px) {
+    body{
+        background-color: blanchedalmond;
+    }
+    .Logo{
+        position: absolute;
+        top: 20%;
+    }
+    .Pikachu{
+        position: absolute;
+        top: 40%;
+    }
+
 }
