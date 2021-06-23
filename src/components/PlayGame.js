@@ -2,6 +2,7 @@ import pokemonCards from '../data/pokemonCards/pokemonCards.js';
 
 //Array de cartas Pokémon
  const cards = pokemonCards.items; 
+
  //Array de cartas duplicadas
  const cardsPair = cards.concat(cards); 
 // función shuffle para barajar las cartas
@@ -13,15 +14,10 @@ import pokemonCards from '../data/pokemonCards/pokemonCards.js';
          array [j] = temporary;
      }
  }
+  shuffle(cardsPair); // función shuffle para barajar las cartas
 
- shuffle(cardsPair); // función shuffle para barajar las cartas
-
- /* cards = shuffle (cards); */ 
-  
-   
- const play = () => {
-
-let idCards= "";
+const play = () => {
+ 
 //-----Creación de HTML dinámico
  const containerPlay = document.createElement('div');
  containerPlay.className = 'containerPlay'; // container padre del juego
@@ -34,7 +30,7 @@ let idCards= "";
  const gridBoard = function(cardsPair) {
     
   containerGrid.innerHTML = "";
-    for (let i = 0; i < cardsPair.length; i++) {
+    for (let i = 0; i < cardsPair.length; i++) { //recorre la data
 
     let cardShown = document.createElement("div");
     cardShown.className = "cardShown";
@@ -43,29 +39,31 @@ let idCards= "";
     cardBack.setAttribute("src", "./components/reverso_carta.png"); // se crea un div para cada carta
     cardShown.appendChild(cardBack);
     
-    cardBack.addEventListener("click", () =>{
+    
+    cardBack.addEventListener("click", () => {
       cardBack.setAttribute("src", cardsPair[i].image);
       cardBack.id= (cardsPair[i].id);
       })
       console.log(cardBack);
-      //llamar funcion de match
+      gridBoard(cardsPair); 
+  
+  /*let shuffleCards = shuffle(cardsPair);
+  let matchedCards= []; 
+  let pickedCards = []; 
+  
+      const flipCard = (target) => {
+        if (pickedCards.length>2 && !pickedCards.includes(target) && !matchedCards.includes(target)){
+          pickedCards.push(target); 
+          target.classList.toggle('flipped');
+          if(pickedCards.length === 2) {
+        setTimeout(matchedCard, 600); */
+
+      }   
 
 
-    containerGrid.appendChild(cardShown);
-
-    }
-   }
-   
-  gridBoard(cardsPair); 
-  /*let shuffleCards = shuffle( cardsPair)
-  let pickedCards :[];
-  let matchedCards: []; */
-
- /* const cardShown = document.querySelectorAll('.cardShown').addEventListener ('click', flipCard);
-  function flipCard () {
-    cardShown.classList.toggle("flipCard") 
-  } */
-
+  containerGrid.appendChild(cardShown);
+ }
  return containerPlay;
-}
-export default play;
+  };
+
+export default play
