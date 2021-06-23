@@ -13,6 +13,7 @@ import pokemonCards from '../data/pokemonCards/pokemonCards.js';
          array [j] = temporary;
      }
  }
+
  shuffle(cardsPair); // función shuffle para barajar las cartas
 
  /* cards = shuffle (cards); */ 
@@ -20,7 +21,7 @@ import pokemonCards from '../data/pokemonCards/pokemonCards.js';
    
  const play = () => {
 
-
+let idCards= "";
 //-----Creación de HTML dinámico
  const containerPlay = document.createElement('div');
  containerPlay.className = 'containerPlay'; // container padre del juego
@@ -44,8 +45,9 @@ import pokemonCards from '../data/pokemonCards/pokemonCards.js';
     
     cardBack.addEventListener("click", () =>{
       cardBack.setAttribute("src", cardsPair[i].image);
+      cardBack.id= (cardsPair[i].id);
       })
-
+      console.log(cardBack);
       //llamar funcion de match
 
 

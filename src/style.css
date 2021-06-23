@@ -99,7 +99,7 @@ body{
 .cardBack:hover{
     transform: scale(.97);
     transition: transform 5s;
-    transition-duration: 10s;
+    transition-duration: 1s;
     box-shadow: 0 0 30px 20px rgb(255, 255, 255);
 }
 /*.cardBack:active{
