@@ -10,22 +10,25 @@ const Starting = () => {
         document.getElementById('root').appendChild(play());
         }
         
-
+  // container padre
   const container = document.createElement('div');
-  container.className = 'container'; // container padre
-  
+  container.className = 'container'; 
+
+  // div hijo de container que almacena el logo
   const containerLogo = document.createElement('div');
   containerLogo.className = 'Logo';
-  container.appendChild(containerLogo); // div hijo de container que almacena el logo
+  container.appendChild(containerLogo); 
 
+  // div hijo de container que almacena el gif
   const containerPikachu = document.createElement('div');
   containerPikachu.className = 'Pikachu';
-  container.appendChild(containerPikachu); // div hijo de container que almacena el gif
+  container.appendChild(containerPikachu); 
 
+  // div hijo de container que almacena el botón start
   const subContainer = document.createElement('div');
   subContainer.className = 'start';
   subContainer.addEventListener('click', startBtn); 
-  container.appendChild(subContainer); // div hijo de container que almacena el botón start
+  container.appendChild(subContainer); 
 
   
   return container;
