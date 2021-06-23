@@ -5,8 +5,6 @@ import pokemonCards from '../data/pokemonCards/pokemonCards.js';
 
  //Array de cartas duplicadas
  const cardsPair = cards.concat(cards); 
-
-
 // función shuffle para barajar las cartas
  function shuffle (array){
      for(let i= array.length -1; i > 0; i--) {
@@ -44,7 +42,10 @@ const play = () => {
     
     cardBack.addEventListener("click", () => {
       cardBack.setAttribute("src", cardsPair[i].image);
-    gridBoard(cardsPair); 
+      cardBack.id= (cardsPair[i].id);
+      })
+      console.log(cardBack);
+      gridBoard(cardsPair); 
   
   /*let shuffleCards = shuffle(cardsPair);
   let matchedCards= []; 
@@ -57,7 +58,7 @@ const play = () => {
           if(pickedCards.length === 2) {
         setTimeout(matchedCard, 600); */
 
-      },      
+      }   
 
 
   containerGrid.appendChild(cardShown);
