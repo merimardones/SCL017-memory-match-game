@@ -39,29 +39,44 @@ const play = () => {
         cardShown.appendChild(cardBack);
         
         
-        cardBack.addEventListener("click", () => {
+        cardBack.addEventListener("click", function () {
           cardBack.setAttribute("src", cardsPair[i].image);
-          let id = cardBack.id= (cardsPair[i].id);
+         /* let id = cardBack.id= (cardsPair[i].id); */
           cardBack.className = "frontCard";
-          console.log(id);
-         })
-         
-           /*if(frontCard.length>2)*/
-    
-        /*let shuffleCards = shuffle(cardsPair);
-        let matchedCards= []; 
-        let frontCard = []; 
-    
-        const flipCard = (target) => {
-          if (frontCard.length>2 && !frontCard.includes(target) && !matchedCards.includes(target)){
-            frontCard.push(target); 
-            target.classList.toggle('flipped');
-            if(frontCard.length === 2) {
-          setTimeout(matchedCard, 600);*/
-
+         /* console.log(id); */
+         clickCard (cardsPair[i], cardBack);
+         });
+        /*if( cardsPair[i]).matched) {
+          cardBack.setAttribute("src", cardsPair[i].image);
+        } */
+           
         containerGrid.appendChild(cardShown);
       }   
 
+     /* let matchedCards = []; */
+      let chosenClick = [];
+
+      function finalMatch (arrayOfChosenClick) {
+        if (arrayOfChosenClick==2) {
+          if(arrayOfChosenClick[0].id == arrayOfChosenClick[1].id) {
+            arrayOfChosenClick [0].matched= true;
+            arrayOfChosenClick [1].matched= true;
+            arrayOfChosenClick.length =0;
+             } else {
+               arrayOfChosenClick.length=0;
+             } 
+          }
+        }
+      function clickCard (cardData, imageCard){
+        imageCard.setAttribute ("src", cardData.image);
+        if (cardData.matched) {
+          return false;
+        } 
+        chosenClick.push (cardData);
+        setTimeout (function() {
+          finalMatch (chosenClick);
+        }, 2000);
+      }
   }
   gridBoard(cardsPair); 
 
