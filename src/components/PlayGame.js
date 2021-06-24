@@ -5,6 +5,8 @@ import pokemonCards from '../data/pokemonCards/pokemonCards.js';
  //Array de cartas duplicadas
  const cardsPair = cards.concat(cards); 
 // función shuffle para barajar las cartas
+ 
+
  function shuffle (array){
      for(let i= array.length -1; i > 0; i--) {
          let j = Math.floor(Math.random() * (i+1));
@@ -14,6 +16,8 @@ import pokemonCards from '../data/pokemonCards/pokemonCards.js';
      }
  }
   shuffle(cardsPair); // función shuffle para barajar las cartas
+  
+  const chosenClick = [];
 
 const play = () => {
  
@@ -26,7 +30,7 @@ const play = () => {
   containerPlay.appendChild(containerGrid);// container donde va el grid de cartas
   
   //----Creación de divs para cada reverso de carta (se inserta imagen en los 18 divs)
-  const gridBoard = function(cardsPair) {
+  const gridBoard = function() {
       
     containerGrid.innerHTML = "";
       for (let i = 0; i < cardsPair.length; i++) { //recorre la data
@@ -41,44 +45,51 @@ const play = () => {
         
         cardBack.addEventListener("click", function () {
           cardBack.setAttribute("src", cardsPair[i].image);
-         /* let id = cardBack.id= (cardsPair[i].id); */
+          /*let id = (cardsPair[i].id); */
           cardBack.className = "frontCard";
-         /* console.log(id); */
-         clickCard (cardsPair[i], cardBack);
-         });
-        /*if( cardsPair[i]).matched) {
+          /*console.log(id); */
+          setTimeout (() => {
+           clickCard (cardsPair[i], cardBack); 
+          }, 400);
+        });
+          /*if(cardsPair[i]).matched) {
           cardBack.setAttribute("src", cardsPair[i].image);
         } */
-           
+
         containerGrid.appendChild(cardShown);
       }   
+    }
+    gridBoard(); 
 
-     /* let matchedCards = []; */
-      let chosenClick = [];
+    function clickCard(cardData, imageCard){
+      imageCard.setAttribute("src", cardData.image);
+      if (cardData.matched) {
+        return false;
+      } 
+      chosenClick.push(cardData);
+      setTimeout(function() {
+        finalMatch (chosenClick);
+      }, 2000);
+
 
       function finalMatch (arrayOfChosenClick) {
-        if (arrayOfChosenClick==2) {
+        if (arrayOfChosenClick.length == 2) {
           if(arrayOfChosenClick[0].id == arrayOfChosenClick[1].id) {
-            arrayOfChosenClick [0].matched= true;
-            arrayOfChosenClick [1].matched= true;
-            arrayOfChosenClick.length =0;
+            arrayOfChosenClick [0].matched = true;
+            arrayOfChosenClick [1].matched = true;
+            alert("finalmatch");
+            arrayOfChosenClick.length =0
              } else {
                arrayOfChosenClick.length=0;
              } 
+            gridBoard(); 
           }
         }
-      function clickCard (cardData, imageCard){
-        imageCard.setAttribute ("src", cardData.image);
-        if (cardData.matched) {
-          return false;
-        } 
-        chosenClick.push (cardData);
-        setTimeout (function() {
-          finalMatch (chosenClick);
-        }, 2000);
+
+
+      
       }
-  }
-  gridBoard(cardsPair); 
+ 
 
   return containerPlay;
 };
