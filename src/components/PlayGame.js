@@ -41,8 +41,9 @@ const play = () => {
         
         cardBack.addEventListener("click", () => {
           cardBack.setAttribute("src", cardsPair[i].image);
-          cardBack.id= (cardsPair[i].id);
+          let id = cardBack.id= (cardsPair[i].id);
           cardBack.className = "frontCard";
+          console.log(id);
          })
          
            /*if(frontCard.length>2)*/
