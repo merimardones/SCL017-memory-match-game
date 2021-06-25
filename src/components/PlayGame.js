@@ -55,7 +55,7 @@ const play = () => {
           /*if(cardsPair[i]).matched) {
           cardBack.setAttribute("src", cardsPair[i].image);
         } */
-
+        
         containerGrid.appendChild(cardShown);
       }   
     }
