@@ -4,10 +4,10 @@ import pokemonCards from '../data/pokemonCards/pokemonCards.js';
  const cards = pokemonCards.items; 
  //Array de cartas duplicadas
  const cardsPair = cards.concat(cards); 
-// función shuffle para barajar las cartas
- 
 
- function shuffle (array){
+
+// función shuffle para barajar las cartas
+  function shuffle (array){
      for(let i= array.length -1; i > 0; i--) {
          let j = Math.floor(Math.random() * (i+1));
          let temporary = array[i];
@@ -20,7 +20,7 @@ import pokemonCards from '../data/pokemonCards/pokemonCards.js';
   const chosenClick = [];
 
 const play = () => {
- 
+    
   //-----Creación de HTML dinámico
   const containerPlay = document.createElement('div');
   containerPlay.className = 'containerPlay'; // container padre del juego
@@ -44,12 +44,12 @@ const play = () => {
         
         
         cardBack.addEventListener("click", function () {
-          cardBack.setAttribute("src", cardsPair[i].image);
+          cardBack.setAttribute("src", cardsPair[i].image); //dar vuelta carta boca arriba (con el pokémon visible).
           /*let id = (cardsPair[i].id); */
           cardBack.className = "frontCard";
           /*console.log(id); */
           setTimeout (() => {
-           clickCard (cardsPair[i], cardBack); 
+           flipCardBack (cardsPair[i], cardBack); 
           }, 200);
         });
           /*if(cardsPair[i]).matched) {
@@ -61,8 +61,8 @@ const play = () => {
     }
     gridBoard(); 
 
-    function clickCard(cardData, imageCard){
-      imageCard.setAttribute("src", cardData.image);
+    function flipCardBack(cardData, imageCard){
+      //imageCard.setAttribute("src", cardData.image); 
       if (cardData.matched) {
         return false;
       } 
@@ -78,20 +78,15 @@ const play = () => {
             arrayOfChosenClick [0].matched = true;
             arrayOfChosenClick [1].matched = true;
             alert("finalmatch");
-            arrayOfChosenClick.length =0
-             } else {
-               arrayOfChosenClick.length=0;
-             } 
-            gridBoard(); 
-          }
+            arrayOfChosenClick.length =0;
+          } else {
+            arrayOfChosenClick.length=0;
+          } 
+          gridBoard(); 
         }
-
-
-      
       }
- 
-
-  return containerPlay;
+           }
+   return containerPlay;
 };
 
 export default play
