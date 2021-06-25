@@ -50,7 +50,7 @@ const play = () => {
           /*console.log(id); */
           setTimeout (() => {
            clickCard (cardsPair[i], cardBack); 
-          }, 400);
+          }, 200);
         });
           /*if(cardsPair[i]).matched) {
           cardBack.setAttribute("src", cardsPair[i].image);
@@ -69,7 +69,7 @@ const play = () => {
       chosenClick.push(cardData);
       setTimeout(function() {
         finalMatch (chosenClick);
-      }, 2000);
+      }, 1000);
 
 
       function finalMatch (arrayOfChosenClick) {
