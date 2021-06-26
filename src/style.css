@@ -102,7 +102,13 @@ body{
     transition-duration: 1s;
     box-shadow: 0 0 30px 20px rgb(255, 255, 255);
 }
+<<<<<<< HEAD
+.cardBack:active{
+    transform: rotateY(180deg);
+}
+=======
 
+>>>>>>> 869a66090810f154eadbe34623693146edd23535
 .targetBack{
     width: 60%; 
     height: 30%; 
