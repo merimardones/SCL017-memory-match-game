@@ -50,7 +50,14 @@ A continuación te dejamos las dos historias de usuario, los criterios de acepta
 * Criterios de aceptación y definición de terminado -Usuario 2
 ![Criterios de aceptación usuario 2](imagenesProyecto/readme/Criterios_y_definici%C3%B3n_1.png)
 
-/*AQUÍ HAY QUE ESCRIBIR LA DEFINICIÓN DE TERMINADO ÚNICO QUE CREAMOS CON LAS DOS DEFINICIONES QUE TENEMOS, HAY QUE MEZCLARLOS */
+* **DEFINICIÓN DE TERMINADO**
+
+A partir de ambas historias de usuario podemos concluir que nuestra definición de terminado única y final debe cumplir las siguientes condiciones:
+
+1. Cumplir y pasar todos los tests unitarios de código. 
+2. Haber realizado al menos dos test de usabilidad e iterar según el feedback que recibamos. 
+3.  Cumplir con todos los criterios de aceptación.
+4. Haber recibido el feedback de compañeras y coach de Laboratoria. Iterar según feeedback recibido.
 
 
 ## 3. Prototipo de baja fidelidad
@@ -85,10 +92,10 @@ Además, para poder realizar nuestra aplicación con diseño responsivo o *respo
 Así es como luce nuestra versión para dispositivo móviles Android
 
 * Página de introducción
-![Prototipo de alta fidelidad 1 para celulares](imagenesProyecto/readme/ProtoMobile.png) 
+![Prototipo de alta fidelidad 1 para celulares](imagenesProyecto/readme/VrMobile.bmp) 
 
 * Juego de cartas 
-![Prototipo de alta fidelidad 2 para celulares](imagenesProyecto/readme/ProtoMobile2.png) 
+![Prototipo de alta fidelidad 2 para celulares](imagenesProyecto/readme/VrMobile2.bmp) 
 
 * Mensaje de finalización del juego
 ![Prototipo de alta fidelidad 3 para celulares](imagenesProyecto/readme/ProtoMobile3.png) 
