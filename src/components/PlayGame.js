@@ -43,14 +43,17 @@ const play = () => {
         let cardBack = document.createElement('img'); 
         cardBack.className = "cardBack";
         cardBack.setAttribute("src", "./components/reverso_carta.png"); // Se inserta la imagen del reverso 
-        cardShown.appendChild(cardBack);    
+        if (cardsPair[i].matched){
+          cardBack.setAttribute('src', cardsPair[i].image);
+        }
+          cardShown.appendChild(cardBack);    
         cardBack.addEventListener("click", function () {      //Función al clickear una carta
           if (chosenClick.length < 2) {                       // Permite clickear solo dos cartas
             cardBack.setAttribute("src", cardsPair[i].image); //Mostrar el pokémon cuando se gira. 
             chosenClick.push(cardsPair[i]);                   //Guarda las cartas clickeadas en línea 22       
             setTimeout (() => {                               // Tiempo para el girar las cartas
               flipCardBack (cardsPair[i], cardBack); 
-            }, 1000);
+            },1000);
           }
         });                
         containerGrid.appendChild(cardShown);                 // Creación del div para cada carta
@@ -72,7 +75,6 @@ const play = () => {
           if(arrayOfChosenClick[0].id == arrayOfChosenClick[1].id) {
             arrayOfChosenClick [0].matched = true;
             arrayOfChosenClick [1].matched = true;
-            alert("finalmatch");
           }
           else (gridBoard())
           arrayOfChosenClick.length =0;                       
