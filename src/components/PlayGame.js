@@ -19,7 +19,6 @@ import pokemonCards from '../data/pokemonCards/pokemonCards.js';
   
   const chosenClick = [];
 
-
 const play = () => {
     
   //-----Creación de HTML dinámico
@@ -32,7 +31,6 @@ const play = () => {
   
   //----Creación de divs para cada reverso de carta (se inserta imagen en los 18 divs)
   const gridBoard = function() {
-
       
     containerGrid.innerHTML = "";
       for (let i = 0; i < cardsPair.length; i++) { //recorre la data
@@ -42,6 +40,9 @@ const play = () => {
         let cardBack = document.createElement('img');
         cardBack.className = "cardBack";
         cardBack.setAttribute("src", "./components/reverso_carta.png"); // se crea un div para cada carta
+        if(cardsPair[i].matched) {
+          cardBack.setAttribute("src", cardsPair[i].image);
+           }
         cardShown.appendChild(cardBack);
         
         
@@ -89,14 +90,13 @@ const play = () => {
           if(arrayOfChosenClick[0].id == arrayOfChosenClick[1].id) {
             arrayOfChosenClick [0].matched = true;
             arrayOfChosenClick [1].matched = true;
-            alert("finalmatch");
-
+            
           }
           else (gridBoard())
           arrayOfChosenClick.length =0;
           
           //cardBack.setAttribute("src", arrayOfChosenClick[0].image); 
-          
+
         }
       }
            
