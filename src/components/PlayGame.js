@@ -18,6 +18,10 @@ import pokemonCards from '../data/pokemonCards/pokemonCards.js';
   shuffle(cardsPair); // función shuffle para barajar las cartas
   
   const chosenClick = [];
+  let primeraCartagirada = true;
+   
+
+  
 
 const play = () => {
     
@@ -45,47 +49,48 @@ const play = () => {
         
         cardBack.addEventListener("click", function () {
           cardBack.setAttribute("src", cardsPair[i].image); //dar vuelta carta boca arriba (con el pokémon visible).
-          /*let id = (cardsPair[i].id); */
-          cardBack.className = "frontCard";
+         //cardBack.className = "frontCard";
           /*console.log(id); */
-          setTimeout (() => {
+          //setTimeout (() => {
            flipCardBack (cardsPair[i], cardBack); 
-          }, 200);
-        });
-          /*if(cardsPair[i]).matched) {
-          cardBack.setAttribute("src", cardsPair[i].image);
-        } */
-        
+           
+          setTimeout(function() {
+            finalMatch (chosenClick);
+          }, 1000);
+         
+        });        
         containerGrid.appendChild(cardShown);
       }   
     }
     gridBoard(); 
 
-    function flipCardBack(cardData, imageCard){
-      //imageCard.setAttribute("src", cardData.image); 
-      if (cardData.matched) {
-        return false;
-      } 
-      chosenClick.push(cardData);
-      setTimeout(function() {
-        finalMatch (chosenClick);
-      }, 1000);
+        
+        function flipCardBack(cardData, imageCard){
+        if (cardData.matched) {
+          imageCard.setAttribute("src", cardData.image);
+          return false;
+        } 
+          chosenClick.push(cardData);
+          setTimeout(function() {
+            finalMatch (chosenClick);
+          }, 1000);
 
-
+       
       function finalMatch (arrayOfChosenClick) {
         if (arrayOfChosenClick.length == 2) {
-          if(arrayOfChosenClick[0].id == arrayOfChosenClick[1].id) {
+          if(arrayOfChosenClick[0].id === arrayOfChosenClick[1].id) {
             arrayOfChosenClick [0].matched = true;
-            arrayOfChosenClick [1].matched = true;
-            alert("finalmatch");
-            arrayOfChosenClick.length =0;
-          } else {
-            arrayOfChosenClick.length=0;
-          } 
+            arrayOfChosenClick [1].matched = true;          
+          
+          } else if (arrayOfChosenClick.length>2) {
+                arrayOfChosenClick [2].id=0;
+            }        
+          
           gridBoard(); 
         }
       }
-           }
+     }
+           
    return containerPlay;
 };
 

@@ -103,16 +103,7 @@ body{
     box-shadow: 0 0 30px 20px rgb(255, 255, 255);
 }
 
-.targetBack{
-    width: 60%; 
-    height: 30%; 
-    box-shadow: 0 0 12px rgba(0, 0, 0, 0.7);
-    border-radius: 10%;
-    border: 4px solid #000092;
-    transition: transform 1s;
-    backface-visibility: hidden;
-    transform-style: preserve-3d;
-}
+
 
 
 
