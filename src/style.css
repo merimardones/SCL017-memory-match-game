@@ -110,7 +110,7 @@ body{
 .finalMsn{
     font-family: 'Play', sans-serif;
     color: white;
-    font-size: 350%;
+    font-size: 300%;
     font-weight:900;
     text-align: center;
     line-height: 150%;
@@ -119,74 +119,32 @@ body{
     border: 5px solid #c9ce1b;
     border-radius: 3%;
     position: absolute;
-    width: 70%;
-    height: 30%;
+    width: 65%;
+    height: 25%;
     top: 2%;
     left: 15%;
 }
 .cup{
-    width: 25%;
-    height: 65%;
+    width: 22%;
+    height: 60%;
     position: absolute;
-    top: 30%;
+    top: 25%;
     left: 35%;
 }
 .streamer{
     width: 70%;
-    height: 95%;
+    height: 80%;
     position: absolute;
     top: 2%;
     left: 15%;
 }
-
-
-
-
-@media only screen and (max-width: 640px) {
-    body{
-        background-color: #cb000a;
-    }
-    .Logo{
-        position: absolute;
-        top: 20%;
-    }
-    .Pikachu{
-        position: absolute;
-        top: 40%;
-    }
-
-
-
-/* Iphone X hacia delante
-@media only screen and (min-device-width: 375px) and (max-device-width: 480px){ 
-
-    body{
-        background-color: #585858;
-        background-image: url('./Design/backgroundMobile.png');
-        background-size: 106%;
-    }
-
-    .Logo{
-        padding: 28%;
-        position:absolute;
-        left: 22%;
-        top: 36%;
-    }
-
-    .Pikachu{
-        padding: 10%;
-        position:absolute;
-        top:51%;
-        left: 40%;
-    }
-
-    .start{
-        padding: 21%;
-        position: absolute;
-        top: 60%;
-        left: 14%;
-    }
-} */
+.botonReplay{
+    width: 14%;
+    height: 10%;
+    position: absolute;
+    top: 85%;
+    left: 40%;
+}
 
 /*Ipad */
 @media only screen and (min-width:768px) and (max-width: 800px) { 
@@ -222,7 +180,7 @@ body{
 }
 
 /* iPhone 6/7/8 */
-@media only screen and (min-device-width: 375px) and (max-device-width: 667px){ 
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px){
 
     body{
         background-color: #585858;

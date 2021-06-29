@@ -34,6 +34,7 @@ const play = () => {
   const finalGame = document.createElement ('div');
   finalGame.className = "finalGame";
   containerPlay.appendChild(finalGame);
+  finalGame.style.display = "none";
 
   const finalMsn = document.createElement ('p');
   finalMsn. className = "finalMsn";
@@ -44,6 +45,18 @@ const play = () => {
   cup.className = "cup";
   cup.src = "Design/copa1.png";
   finalGame.appendChild(cup);
+
+  const botonReplay = document.createElement("img");
+  botonReplay.className = "botonReplay";
+  botonReplay.src = "Design/buttonReplay.png";
+  botonReplay.addEventListener('click', () => {
+        
+      document.getElementsByClassName('finalGame');
+      finalGame.style.display = 'none';
+      document.getElementById('root').appendChild(location.reload());
+      
+  })
+  finalGame.appendChild(botonReplay);
 
   const streamer = document.createElement("img");
   streamer.className = "streamer";
@@ -99,11 +112,11 @@ const play = () => {
             matchQuantity++;
 
               if (matchQuantity == 9){
-                //containerGrid.style.display = "none";
+                containerGrid.style.display = "none";
+                finalGame.style.display = "block";
               }
           }
-      } else //(gridBoard())
-      containerGrid.style.display = "none";
+      } else (gridBoard())
 
           arrayOfChosenClick.length =0;                       
       }
