@@ -19,8 +19,11 @@ import pokemonCards from '../data/pokemonCards/pokemonCards.js';
 
   
 //Constante para guardar cartas clickeadas
-  const chosenClick = [];
+
+  const chosenClick = []; 
   let matchQuantity = [];
+
+
 
 const play = () => {
     
@@ -47,6 +50,18 @@ const play = () => {
   streamer.src = "Design/serpentina.gif";
   finalGame.appendChild(streamer);
     
+  const finalGame = document.createElement ('div');
+  finalGame.className = "finalGame";
+  containerPlay.appendChild(finalGame);
+
+  const finalMsn = document.createElement ('div');
+  finalMsn. className = "finalGame";
+  finalMsn.textContent = "¡Felicitaciones! <br> Has ganado";
+  finalGame.appendChild(finalMsn);
+  
+
+  
+
   const containerGrid = document.createElement('div');
   containerGrid.className = 'containerGrid'; 
   containerPlay.appendChild(containerGrid);// container donde va el grid de cartas
@@ -78,31 +93,32 @@ const play = () => {
         containerGrid.appendChild(cardShown);                 // Creación del div para cada carta
       }  
   }
-    gridBoard(); 
+  gridBoard(); 
+  
+  
+  function flipCardBack(){
+    finalMatch (chosenClick);          
+  }
 
-    // Función que une el girar con el match
-    function flipCardBack(cardData, imageCard){
-      imageCard.setAttribute("src", cardData.image); 
-          setTimeout(function() {
-            finalMatch (chosenClick);
-          }, 1000);
-    }
 
-    function finalMatch (arrayOfChosenClick) {
+    
+ function finalMatch (arrayOfChosenClick) {
+
       if (arrayOfChosenClick.length == 2) {
           if(arrayOfChosenClick[0].id == arrayOfChosenClick[1].id) {
             arrayOfChosenClick [0].matched = true;
             arrayOfChosenClick [1].matched = true;
             matchQuantity++;
-            if (matchQuantity == 9){
-              //containerGrid.style.display = 'none';
-            }
+
+              if (matchQuantity == 9){
+                alert(matchQuantity)
+              }
           }
-          else //(gridBoard())
-          containerGrid.style.display = 'none'
+      } else (gridBoard())
+
           arrayOfChosenClick.length =0;                       
       }
-    }    
+        
    return containerPlay;
 };
 
