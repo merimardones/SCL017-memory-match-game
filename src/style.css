@@ -141,53 +141,6 @@ body{
 
 
 
-
-@media only screen and (max-width: 640px) {
-    body{
-        background-color: #cb000a;
-    }
-    .Logo{
-        position: absolute;
-        top: 20%;
-    }
-    .Pikachu{
-        position: absolute;
-        top: 40%;
-    }
-
-
-
-/* Iphone X hacia delante
-@media only screen and (min-device-width: 375px) and (max-device-width: 480px){ 
-
-    body{
-        background-color: #585858;
-        background-image: url('./Design/backgroundMobile.png');
-        background-size: 106%;
-    }
-
-    .Logo{
-        padding: 28%;
-        position:absolute;
-        left: 22%;
-        top: 36%;
-    }
-
-    .Pikachu{
-        padding: 10%;
-        position:absolute;
-        top:51%;
-        left: 40%;
-    }
-
-    .start{
-        padding: 21%;
-        position: absolute;
-        top: 60%;
-        left: 14%;
-    }
-} */
-
 /*Ipad */
 @media only screen and (min-width:768px) and (max-width: 800px) { 
 
