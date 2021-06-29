@@ -19,8 +19,10 @@ import pokemonCards from '../data/pokemonCards/pokemonCards.js';
 
   
 //Constante para guardar cartas clickeadas
+
   const chosenClick = []; 
   let matchQuantity = [];
+
 
 
 const play = () => {
@@ -28,6 +30,25 @@ const play = () => {
   //Creación de HTML dinámico
   const containerPlay = document.createElement('div');
   containerPlay.className = 'containerPlay'; // container padre del juego
+
+  const finalGame = document.createElement ('div');
+  finalGame.className = "finalGame";
+  containerPlay.appendChild(finalGame);
+
+  const finalMsn = document.createElement ('p');
+  finalMsn. className = "finalMsn";
+  finalMsn.textContent = "¡Felicitaciones! \n  Has ganado ";
+  finalGame.appendChild(finalMsn);
+
+  const cup = document.createElement("img");
+  cup.className = "cup";
+  cup.src = "Design/copa1.png";
+  finalGame.appendChild(cup);
+
+  const streamer = document.createElement("img");
+  streamer.className = "streamer";
+  streamer.src = "Design/serpentina.gif";
+  finalGame.appendChild(streamer);
     
   const finalGame = document.createElement ('div');
   finalGame.className = "finalGame";
@@ -55,7 +76,7 @@ const play = () => {
         cardShown.className = "cardShown";
         let cardBack = document.createElement('img'); 
         cardBack.className = "cardBack";
-        cardBack.setAttribute("src", "./components/reverso_carta.png"); // Se inserta la imagen del reverso 
+        cardBack.setAttribute("src","./components/reverso_carta.png"); // Se inserta la imagen del reverso 
         if (cardsPair[i].matched){
           cardBack.setAttribute('src', cardsPair[i].image);
         }
@@ -79,18 +100,22 @@ const play = () => {
     finalMatch (chosenClick);          
   }
 
+
     
  function finalMatch (arrayOfChosenClick) {
+
       if (arrayOfChosenClick.length == 2) {
           if(arrayOfChosenClick[0].id == arrayOfChosenClick[1].id) {
             arrayOfChosenClick [0].matched = true;
             arrayOfChosenClick [1].matched = true;
             matchQuantity++;
+
               if (matchQuantity == 9){
                 alert(matchQuantity)
               }
           }
       } else (gridBoard())
+
           arrayOfChosenClick.length =0;                       
       }
         
@@ -98,4 +123,3 @@ const play = () => {
 };
 
 export default play
-

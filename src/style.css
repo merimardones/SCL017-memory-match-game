@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Play&display=swap');
 *{
     margin: 0 ;
     padding: 0;
@@ -11,6 +12,7 @@ body{
     background-color: #cb000a;   
     background-position:center;  
     overflow: hidden;
+    /*cursor: url(./Design/pokebola.png),auto;*/
 }
 
 .container{
@@ -101,19 +103,90 @@ body{
     transition-duration: 1s;
     box-shadow: 0 0 30px 20px rgb(255, 255, 255);
 }
-
 .finalGame{
-    background-color: black;
-    padding: 20%;
+    /*background-color: rgb(74, 223, 29);*/
+    padding: 15%;
 }
-
 .finalMsn{
+    font-family: 'Play', sans-serif;
     color: white;
-    
+    font-size: 350%;
+    font-weight:900;
+    text-align: center;
+    line-height: 150%;
+    white-space: pre-line;
+    background-color: #3fe56e;
+    border: 5px solid #c9ce1b;
+    border-radius: 3%;
+    position: absolute;
+    width: 70%;
+    height: 30%;
+    top: 2%;
+    left: 15%;
+}
+.cup{
+    width: 25%;
+    height: 65%;
+    position: absolute;
+    top: 30%;
+    left: 35%;
+}
+.streamer{
+    width: 70%;
+    height: 95%;
+    position: absolute;
+    top: 2%;
+    left: 15%;
 }
 
 
-/* ---------------Comienzo de media querys---------------- */
+
+
+@media only screen and (max-width: 640px) {
+    body{
+        background-color: #cb000a;
+    }
+    .Logo{
+        position: absolute;
+        top: 20%;
+    }
+    .Pikachu{
+        position: absolute;
+        top: 40%;
+    }
+
+
+
+/* Iphone X hacia delante
+@media only screen and (min-device-width: 375px) and (max-device-width: 480px){ 
+
+    body{
+        background-color: #585858;
+        background-image: url('./Design/backgroundMobile.png');
+        background-size: 106%;
+    }
+
+    .Logo{
+        padding: 28%;
+        position:absolute;
+        left: 22%;
+        top: 36%;
+    }
+
+    .Pikachu{
+        padding: 10%;
+        position:absolute;
+        top:51%;
+        left: 40%;
+    }
+
+    .start{
+        padding: 21%;
+        position: absolute;
+        top: 60%;
+        left: 14%;
+    }
+} */
 
 /*Ipad */
 @media only screen and (min-width:768px) and (max-width: 800px) { 
@@ -146,19 +219,6 @@ body{
         top: 80%;
         left: 14%;
     }
-
-    .containerPlay{
-        width: 90%;
-        height: 93%;
-        left: 2%;
-        right: 2%;
-
-    }
-   
-    .cardShown{
-        width: 25%;
-
-    }
 }
 
 /* iPhone 6/7/8 */
@@ -189,15 +249,5 @@ body{
         position: absolute;
         top: 75%;
         left: 14%;
-    }
-
-    .containerPlay{
-        width: 91%;
-        height: 93%;
-        left: auto;
-    }
-   
-    .cardShown{
-        width: 27%;
     }
  }
