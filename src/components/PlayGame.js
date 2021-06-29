@@ -19,13 +19,33 @@ import pokemonCards from '../data/pokemonCards/pokemonCards.js';
 
   
 //Constante para guardar cartas clickeadas
-  const chosenClick = []; 
+  const chosenClick = [];
+  let matchQuantity = [];
 
 const play = () => {
     
   //Creación de HTML dinámico
   const containerPlay = document.createElement('div');
   containerPlay.className = 'containerPlay'; // container padre del juego
+
+  const finalGame = document.createElement ('div');
+  finalGame.className = "finalGame";
+  containerPlay.appendChild(finalGame);
+
+  const finalMsn = document.createElement ('p');
+  finalMsn. className = "finalMsn";
+  finalMsn.textContent = "¡Felicitaciones! \n  Has ganado ";
+  finalGame.appendChild(finalMsn);
+
+  const cup = document.createElement("img");
+  cup.className = "cup";
+  cup.src = "Design/copa1.png";
+  finalGame.appendChild(cup);
+
+  const streamer = document.createElement("img");
+  streamer.className = "streamer";
+  streamer.src = "Design/serpentina.gif";
+  finalGame.appendChild(streamer);
     
   const containerGrid = document.createElement('div');
   containerGrid.className = 'containerGrid'; 
@@ -41,30 +61,9 @@ const play = () => {
         cardShown.className = "cardShown";
         let cardBack = document.createElement('img'); 
         cardBack.className = "cardBack";
-<<<<<<< HEAD
-        cardBack.setAttribute("src", "./components/reverso_carta.png"); // se crea un div para cada carta
-        if(cardsPair[i].matched) {
-          cardBack.setAttribute("src", cardsPair[i].image);
-           }
-        cardShown.appendChild(cardBack);
-        
-        
-        cardBack.addEventListener("click", function () {
-          if (chosenClick.length < 2) {         
-          cardBack.setAttribute("src", cardsPair[i].image); //dar vuelta carta boca arriba (con el pokémon visible).
-          /*let id = (cardsPair[i].id); */
-          cardBack.className = "frontCard";
-          chosenClick.push(cardsPair[i]);
-          /*console.log(id); */
-         
-          setTimeout (() => {
-           flipCardBack (cardsPair[i], cardBack); 
-          }, 1000);
-=======
-        cardBack.setAttribute("src", "./components/reverso_carta.png"); // Se inserta la imagen del reverso 
+        cardBack.setAttribute("src","./components/reverso_carta.png"); // Se inserta la imagen del reverso 
         if (cardsPair[i].matched){
           cardBack.setAttribute('src', cardsPair[i].image);
->>>>>>> fbeee3dad4ef2c8c40639d0aaf7ad6d98a25416f
         }
           cardShown.appendChild(cardBack);    
         cardBack.addEventListener("click", function () {      //Función al clickear una carta
@@ -89,30 +88,22 @@ const play = () => {
           }, 1000);
     }
 
-    
     function finalMatch (arrayOfChosenClick) {
       if (arrayOfChosenClick.length == 2) {
           if(arrayOfChosenClick[0].id == arrayOfChosenClick[1].id) {
             arrayOfChosenClick [0].matched = true;
             arrayOfChosenClick [1].matched = true;
-<<<<<<< HEAD
-            
+            matchQuantity++;
+            if (matchQuantity == 9){
+              //containerGrid.style.display = 'none';
+            }
           }
-          else (gridBoard())
-          arrayOfChosenClick.length =0;
-          
-          //cardBack.setAttribute("src", arrayOfChosenClick[0].image); 
-
-        }
-=======
-          }
-          else (gridBoard())
+          else //(gridBoard())
+          containerGrid.style.display = 'none'
           arrayOfChosenClick.length =0;                       
->>>>>>> fbeee3dad4ef2c8c40639d0aaf7ad6d98a25416f
       }
     }    
    return containerPlay;
 };
 
 export default play
-
