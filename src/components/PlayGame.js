@@ -50,18 +50,6 @@ const play = () => {
   streamer.src = "Design/serpentina.gif";
   finalGame.appendChild(streamer);
     
-  const finalGame = document.createElement ('div');
-  finalGame.className = "finalGame";
-  containerPlay.appendChild(finalGame);
-
-  const finalMsn = document.createElement ('div');
-  finalMsn. className = "finalGame";
-  finalMsn.textContent = "¡Felicitaciones! <br> Has ganado";
-  finalGame.appendChild(finalMsn);
-  
-
-  
-
   const containerGrid = document.createElement('div');
   containerGrid.className = 'containerGrid'; 
   containerPlay.appendChild(containerGrid);// container donde va el grid de cartas
@@ -111,10 +99,11 @@ const play = () => {
             matchQuantity++;
 
               if (matchQuantity == 9){
-                alert(matchQuantity)
+                //containerGrid.style.display = "none";
               }
           }
-      } else (gridBoard())
+      } else //(gridBoard())
+      containerGrid.style.display = "none";
 
           arrayOfChosenClick.length =0;                       
       }
