@@ -34,6 +34,7 @@ const play = () => {
   const finalGame = document.createElement ('div');
   finalGame.className = "finalGame";
   containerPlay.appendChild(finalGame);
+  finalGame.style.display = "none";
 
   const finalMsn = document.createElement ('p');
   finalMsn. className = "finalMsn";
@@ -45,16 +46,18 @@ const play = () => {
   cup.src = "Design/copa1.png";
   finalGame.appendChild(cup);
 
+  const replayBtn = document.createElement("img");
+  replayBtn.className = "replayBtn";
+  replayBtn.src = "Design/button replay.png"
+  
+  
+    
+
   const streamer = document.createElement("img");
   streamer.className = "streamer";
   streamer.src = "Design/serpentina.gif";
   finalGame.appendChild(streamer);
     
-
-  
-
-  
-
   const containerGrid = document.createElement('div');
   containerGrid.className = 'containerGrid'; 
   containerPlay.appendChild(containerGrid);// container donde va el grid de cartas
@@ -80,7 +83,7 @@ const play = () => {
             chosenClick.push(cardsPair[i]);                   //Guarda las cartas clickeadas en línea 22       
             setTimeout (() => {                               // Tiempo para el girar las cartas
               flipCardBack (cardsPair[i], cardBack); 
-            },1000);
+            },1100);
           }
         });                
         containerGrid.appendChild(cardShown);                 // Creación del div para cada carta
@@ -104,10 +107,12 @@ const play = () => {
             matchQuantity++;
 
               if (matchQuantity == 9){
-                alert(matchQuantity)
+                containerGrid.style.display = "none";
+                finalGame.style.display = "block";
               }
           }
       } else (gridBoard())
+      //containerGrid.style.display = "none";
 
           arrayOfChosenClick.length =0;                       
       }
@@ -117,35 +122,3 @@ const play = () => {
 
 
 export default play
-
-/*Constante para guardar cartas clickeadas
-const chosenClick = []; 
-let matchQuantity = []; */
-
-/*function finalMatch (arrayOfChosenClick) {
->>>>>>> feature-katherine-valcarce
-      if (arrayOfChosenClick.length == 2) {
-          if(arrayOfChosenClick[0].id == arrayOfChosenClick[1].id) {
-            arrayOfChosenClick [0].matched = true;
-            arrayOfChosenClick [1].matched = true;
-            matchQuantity++;
-            if (matchQuantity == 9){
-              //containerGrid.style.display = 'none';
-            }
-          }
-          else //(gridBoard())
-          containerGrid.style.display = 'none'
-              if (matchQuantity == 9){
-                alert(matchQuantity)
-              }
-          }
-      } else (gridBoard())
-          arrayOfChosenClick.length =0;                       
-      }
-        
-   return containerPlay;
-}; */
-
-
-
-

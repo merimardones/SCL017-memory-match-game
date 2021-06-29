@@ -105,7 +105,7 @@ body{
 }
 .finalGame{
     /*background-color: rgb(74, 223, 29);*/
-    padding: 15%;
+    padding: 10%;
 }
 .finalMsn{
     font-family: 'Play', sans-serif;
@@ -117,19 +117,19 @@ body{
     white-space: pre-line;
     background-color: #3fe56e;
     border: 5px solid #c9ce1b;
-    border-radius: 3%;
+    border-radius: 10%;
     position: absolute;
     width: 70%;
-    height: 30%;
+    height: 25%;
     top: 2%;
     left: 15%;
 }
 .cup{
-    width: 25%;
-    height: 65%;
+    width: 17%;
+    height: 46%;
     position: absolute;
     top: 30%;
-    left: 35%;
+    left: 40%;
 }
 .streamer{
     width: 70%;
@@ -137,6 +137,13 @@ body{
     position: absolute;
     top: 2%;
     left: 15%;
+}
+
+.replayBtn{
+    width: 18%;
+    position:absolute;
+    top: 78%;
+    left: 40%;
 }
 
 
