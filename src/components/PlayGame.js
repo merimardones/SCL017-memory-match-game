@@ -29,6 +29,18 @@ const play = () => {
   const containerPlay = document.createElement('div');
   containerPlay.className = 'containerPlay'; // container padre del juego
     
+  const finalGame = document.createElement ('div');
+  finalGame.className = "finalGame";
+  containerPlay.appendChild(finalGame);
+
+  const finalMsn = document.createElement ('div');
+  finalMsn. className = "finalGame";
+  finalMsn.textContent = "¡Felicitaciones! <br> Has ganado";
+  finalGame.appendChild(finalMsn);
+  
+
+  
+
   const containerGrid = document.createElement('div');
   containerGrid.className = 'containerGrid'; 
   containerPlay.appendChild(containerGrid);// container donde va el grid de cartas
@@ -60,18 +72,15 @@ const play = () => {
         containerGrid.appendChild(cardShown);                 // Creación del div para cada carta
       }  
   }
-    gridBoard(); 
-
-    // Función que une el girar con el match
-    function flipCardBack(cardData, imageCard){
-      imageCard.setAttribute("src", cardData.image); 
-          setTimeout(function() {
-            finalMatch (chosenClick);
-          }, 1000);
-    }
+  gridBoard(); 
+  
+  
+  function flipCardBack(){
+    finalMatch (chosenClick);          
+  }
 
     
-    function finalMatch (arrayOfChosenClick) {
+ function finalMatch (arrayOfChosenClick) {
       if (arrayOfChosenClick.length == 2) {
           if(arrayOfChosenClick[0].id == arrayOfChosenClick[1].id) {
             arrayOfChosenClick [0].matched = true;
@@ -79,15 +88,12 @@ const play = () => {
             matchQuantity++;
               if (matchQuantity == 9){
                 alert(matchQuantity)
-
               }
-            }
-            
           }
-          else (gridBoard())
+      } else (gridBoard())
           arrayOfChosenClick.length =0;                       
       }
-    //}    
+        
    return containerPlay;
 };
 

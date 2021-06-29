@@ -102,6 +102,16 @@ body{
     box-shadow: 0 0 30px 20px rgb(255, 255, 255);
 }
 
+.finalGame{
+    background-color: black;
+    padding: 20%;
+}
+
+.finalMsn{
+    color: white;
+    
+}
+
 
 /* ---------------Comienzo de media querys---------------- */
 
