@@ -20,6 +20,7 @@ import pokemonCards from '../data/pokemonCards/pokemonCards.js';
   
 //Constante para guardar cartas clickeadas
   const chosenClick = []; 
+  let matchQuantity = [];
 
 
 const play = () => {
@@ -75,11 +76,18 @@ const play = () => {
           if(arrayOfChosenClick[0].id == arrayOfChosenClick[1].id) {
             arrayOfChosenClick [0].matched = true;
             arrayOfChosenClick [1].matched = true;
+            matchQuantity++;
+              if (matchQuantity == 9){
+                alert(matchQuantity)
+
+              }
+            }
+            
           }
           else (gridBoard())
           arrayOfChosenClick.length =0;                       
       }
-    }    
+    //}    
    return containerPlay;
 };
 
