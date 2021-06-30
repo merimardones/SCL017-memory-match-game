@@ -20,7 +20,7 @@ import pokemonCards from '../data/pokemonCards/pokemonCards.js';
   
 //Constante para guardar cartas clickeadas
 
-  const chosenClick = []; 
+  let chosenClick = []; 
   let matchQuantity = [];
 
 
@@ -53,7 +53,8 @@ const play = () => {
         
       document.getElementsByClassName('finalGame');
       finalGame.style.display = 'none';
-      document.getElementById('root').appendChild(location.reload());
+      document.getElementById('root').appendChild(play());
+      
       
   })
   finalGame.appendChild(botonReplay);
