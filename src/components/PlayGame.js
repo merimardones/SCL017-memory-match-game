@@ -106,7 +106,7 @@ const play = () => {
 
       setTimeout(function() {
         finalMatch (chosenClick);
-      }, 500);
+      }, 1500);
     }
     //finalMatch (chosenClick);          
   
@@ -123,11 +123,16 @@ const play = () => {
               if (matchQuantity === 9){
                 containerGrid.style.display = "none";
                 finalGame.style.display = "block";
+                for (let i = 0; i < 17; i++){
+                 cardsPair[i].matched = false;
+                }
+                 shuffle(cardsPair);
+                 matchQuantity = 0;
+                 
               }
           
           } else (gridBoard())
-      
-          arrayOfChosenClick.length =0;                       
+            arrayOfChosenClick.length =0;                       
       }
     }      
    return containerPlay;

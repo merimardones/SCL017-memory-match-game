@@ -155,7 +155,7 @@ body{
     background-size: 94%;
     border: 4px solid white;
     
-        }
+    }
 
     .Logo{
         padding: 24%;
@@ -176,6 +176,28 @@ body{
         position: absolute;
         top: 80%;
         left: 14%;
+    }
+
+    .finalMsn{
+        width: 70%;
+        height: 18%;
+
+    }
+
+    .cup{
+        width: auto;
+        height: 50%;
+        position: absolute;
+        top: 25%;
+        left: 25%;
+    }
+
+    .botonReplay{
+        width: 40%;
+        height: auto;
+        position: absolute;
+        top: 80%;
+        left: 32%;
     }
 }
 
@@ -207,5 +229,31 @@ body{
         position: absolute;
         top: 75%;
         left: 14%;
+    }
+    .finalMsn{
+        font-size: 180%;
+        width: 70%;
+        height: 18%;
+        position: absolute;
+        width: 70%;
+        height: auto;
+
+
+    }
+
+    .cup{
+        width: auto;
+        height: 50%;
+        position: absolute;
+        top: 25%;
+        left: 18%;
+    }
+
+    .botonReplay{
+        width: 50%;
+        height: auto;
+        position: absolute;
+        top: 80%;
+        left: 28%;
     }
  }
