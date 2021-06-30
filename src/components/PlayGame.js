@@ -140,3 +140,4 @@ const play = () => {
 
 
 export default play
+export {shuffle}
