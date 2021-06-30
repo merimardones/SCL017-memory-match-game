@@ -88,7 +88,7 @@ const play = () => {
             chosenClick.push(cardsPair[i]);                   //Guarda las cartas clickeadas en línea 22       
             setTimeout (() => {                               // Tiempo para el girar las cartas
               flipCardBack (cardsPair[i], cardBack); 
-            }, 200);
+            }, 500);
           }
         });                
         containerGrid.appendChild(cardShown);                 // Creación del div para cada carta
@@ -103,13 +103,13 @@ const play = () => {
         return false;
       } 
       
-     chosenClick.push(cardData);
+     //chosenClick.push(cardData);
 
       setTimeout(function() {
         finalMatch (chosenClick);
-      }, 200);
+      }, 500);
     }
-    finalMatch (chosenClick);          
+    //finalMatch (chosenClick);          
   
 
 
@@ -121,8 +121,7 @@ const play = () => {
             arrayOfChosenClick [0].matched = true;
             arrayOfChosenClick [1].matched = true;
             matchQuantity++;
-
-              if (matchQuantity == 9){
+              if (matchQuantity === 9){
                 containerGrid.style.display = "none";
                 finalGame.style.display = "block";
               }
