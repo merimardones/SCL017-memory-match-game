@@ -49,6 +49,7 @@ body{
     bottom: 32%;
     width: 12%;
     height: 10%;
+    cursor: pointer;
 }
 .containerPlay {
     background-color: #d5e9f5;
