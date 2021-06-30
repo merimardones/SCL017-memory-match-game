@@ -46,15 +46,15 @@ const play = () => {
   cup.src = "Design/copa1.png";
   finalGame.appendChild(cup);
 
-  const botonReplay = document.createElement("img");
-  botonReplay.className = "botonReplay";
-  botonReplay.src = "Design/buttonReplay.png";
-  botonReplay.addEventListener('click', () => {
+  const btnReplay = document.createElement("img");
+  btnReplay.className = "btnReplay";
+  btnReplay.src = "Design/buttonReplay.png";
+  btnReplay.addEventListener('click', () => {
         
       finalGame.style.display = 'none';
       document.getElementById('root').appendChild(play());
   })
-  finalGame.appendChild(botonReplay);
+  finalGame.appendChild(btnReplay);
 
   const streamer = document.createElement("img");
   streamer.className = "streamer";
@@ -106,7 +106,7 @@ const play = () => {
 
       setTimeout(function() {
         finalMatch (chosenClick);
-      }, 1500);
+      }, 1200);
     }
     //finalMatch (chosenClick);          
   
