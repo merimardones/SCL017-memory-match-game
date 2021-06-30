@@ -46,12 +46,17 @@ const play = () => {
   cup.src = "Design/copa1.png";
   finalGame.appendChild(cup);
 
-  const replayBtn = document.createElement("img");
-  replayBtn.className = "replayBtn";
-  replayBtn.src = "Design/button replay.png"
-  
-  
-    
+  const botonReplay = document.createElement("img");
+  botonReplay.className = "botonReplay";
+  botonReplay.src = "Design/buttonReplay.png";
+  botonReplay.addEventListener('click', () => {
+        
+      document.getElementsByClassName('finalGame');
+      finalGame.style.display = 'none';
+      document.getElementById('root').appendChild(location.reload());
+      
+  })
+  finalGame.appendChild(botonReplay);
 
   const streamer = document.createElement("img");
   streamer.className = "streamer";
@@ -83,7 +88,7 @@ const play = () => {
             chosenClick.push(cardsPair[i]);                   //Guarda las cartas clickeadas en línea 22       
             setTimeout (() => {                               // Tiempo para el girar las cartas
               flipCardBack (cardsPair[i], cardBack); 
-            },1100);
+            }, 200);
           }
         });                
         containerGrid.appendChild(cardShown);                 // Creación del div para cada carta
@@ -92,9 +97,20 @@ const play = () => {
   gridBoard(); 
   
   
-  function flipCardBack(){
+  function flipCardBack(cardData, imageCard){
+      imageCard.setAttribute("src", cardData.image); 
+      if (cardData.matched) {
+        return false;
+      } 
+      
+     chosenClick.push(cardData);
+
+      setTimeout(function() {
+        finalMatch (chosenClick);
+      }, 200);
+    }
     finalMatch (chosenClick);          
-  }
+  
 
 
     
@@ -112,8 +128,7 @@ const play = () => {
               }
           }
       } else (gridBoard())
-      //containerGrid.style.display = "none";
-
+      
           arrayOfChosenClick.length =0;                       
       }
         

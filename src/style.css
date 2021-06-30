@@ -110,7 +110,7 @@ body{
 .finalMsn{
     font-family: 'Play', sans-serif;
     color: white;
-    font-size: 350%;
+    font-size: 300%;
     font-weight:900;
     text-align: center;
     line-height: 150%;
@@ -119,34 +119,32 @@ body{
     border: 5px solid #c9ce1b;
     border-radius: 10%;
     position: absolute;
-    width: 70%;
+    width: 65%;
     height: 25%;
     top: 2%;
     left: 15%;
 }
 .cup{
-    width: 17%;
-    height: 46%;
+    width: 22%;
+    height: 60%;
     position: absolute;
-    top: 30%;
-    left: 40%;
+    top: 25%;
+    left: 35%;
 }
 .streamer{
     width: 70%;
-    height: 95%;
+    height: 80%;
     position: absolute;
     top: 2%;
     left: 15%;
 }
-
-.replayBtn{
-    width: 18%;
-    position:absolute;
-    top: 78%;
+.botonReplay{
+    width: 14%;
+    height: 10%;
+    position: absolute;
+    top: 85%;
     left: 40%;
 }
-
-
 
 /*Ipad */
 @media only screen and (min-width:768px) and (max-width: 800px) { 
@@ -182,7 +180,7 @@ body{
 }
 
 /* iPhone 6/7/8 */
-@media only screen and (min-device-width: 375px) and (max-device-width: 667px){ 
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px){
 
     body{
         background-color: #585858;
