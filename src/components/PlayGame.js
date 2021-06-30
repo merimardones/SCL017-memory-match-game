@@ -20,7 +20,7 @@ import pokemonCards from '../data/pokemonCards/pokemonCards.js';
   
 //Constante para guardar cartas clickeadas
 
-  const chosenClick = []; 
+  let chosenClick = []; 
   let matchQuantity = [];
 
 
@@ -51,10 +51,8 @@ const play = () => {
   botonReplay.src = "Design/buttonReplay.png";
   botonReplay.addEventListener('click', () => {
         
-      document.getElementsByClassName('finalGame');
       finalGame.style.display = 'none';
-      document.getElementById('root').appendChild(location.reload());
-      
+      document.getElementById('root').appendChild(play());
   })
   finalGame.appendChild(botonReplay);
 
@@ -64,6 +62,7 @@ const play = () => {
   finalGame.appendChild(streamer);
     
   const containerGrid = document.createElement('div');
+  containerGrid.id= "containerGrid"
   containerGrid.className = 'containerGrid'; 
   containerPlay.appendChild(containerGrid);// container donde va el grid de cartas
   
@@ -85,7 +84,7 @@ const play = () => {
         cardBack.addEventListener("click", function () {      //Función al clickear una carta
           if (chosenClick.length < 2) {                       // Permite clickear solo dos cartas
             cardBack.setAttribute("src", cardsPair[i].image); //Mostrar el pokémon cuando se gira. 
-            chosenClick.push(cardsPair[i]);                   //Guarda las cartas clickeadas en línea 22       
+            chosenClick.push(cardsPair[i]);                   //Guarda las cartas clickeadas en línea 22  
             setTimeout (() => {                               // Tiempo para el girar las cartas
               flipCardBack (cardsPair[i], cardBack); 
             }, 500);
@@ -107,7 +106,7 @@ const play = () => {
 
       setTimeout(function() {
         finalMatch (chosenClick);
-      }, 500);
+      }, 1500);
     }
     //finalMatch (chosenClick);          
   
@@ -124,13 +123,18 @@ const play = () => {
               if (matchQuantity === 9){
                 containerGrid.style.display = "none";
                 finalGame.style.display = "block";
+                for (let i = 0; i < 17; i++){
+                 cardsPair[i].matched = false;
+                }
+                 shuffle(cardsPair);
+                 matchQuantity = 0;
+                 
               }
           
-      } else (gridBoard())
-      
-          arrayOfChosenClick.length =0;                       
+          } else (gridBoard())
+            arrayOfChosenClick.length =0;                       
       }
-   }
+    }      
    return containerPlay;
 };
 
