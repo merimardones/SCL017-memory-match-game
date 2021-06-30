@@ -130,7 +130,8 @@ const play = () => {
       
           arrayOfChosenClick.length =0;                       
       }
-   }
+  
+    }
    return containerPlay;
 };
 
