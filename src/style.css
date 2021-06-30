@@ -105,7 +105,7 @@ body{
 }
 .finalGame{
     /*background-color: rgb(74, 223, 29);*/
-    padding: 15%;
+    padding: 10%;
 }
 .finalMsn{
     font-family: 'Play', sans-serif;
@@ -117,7 +117,7 @@ body{
     white-space: pre-line;
     background-color: #3fe56e;
     border: 5px solid #c9ce1b;
-    border-radius: 3%;
+    border-radius: 10%;
     position: absolute;
     width: 65%;
     height: 25%;

@@ -89,7 +89,7 @@ const play = () => {
             chosenClick.push(cardsPair[i]);                   //Guarda las cartas clickeadas en línea 22       
             setTimeout (() => {                               // Tiempo para el girar las cartas
               flipCardBack (cardsPair[i], cardBack); 
-            },1000);
+            }, 500);
           }
         });                
         containerGrid.appendChild(cardShown);                 // Creación del div para cada carta
@@ -98,9 +98,20 @@ const play = () => {
   gridBoard(); 
   
   
-  function flipCardBack(){
-    finalMatch (chosenClick);          
-  }
+  function flipCardBack(cardData, imageCard){
+      imageCard.setAttribute("src", cardData.image); 
+      if (cardData.matched) {
+        return false;
+      } 
+      
+     //chosenClick.push(cardData);
+
+      setTimeout(function() {
+        finalMatch (chosenClick);
+      }, 500);
+    }
+    //finalMatch (chosenClick);          
+  
 
 
     
@@ -111,14 +122,13 @@ const play = () => {
             arrayOfChosenClick [0].matched = true;
             arrayOfChosenClick [1].matched = true;
             matchQuantity++;
-
-              if (matchQuantity == 9){
+              if (matchQuantity === 9){
                 containerGrid.style.display = "none";
                 finalGame.style.display = "block";
               }
           }
       } else (gridBoard())
-
+      
           arrayOfChosenClick.length =0;                       
       }
         
@@ -127,35 +137,3 @@ const play = () => {
 
 
 export default play
-
-/*Constante para guardar cartas clickeadas
-const chosenClick = []; 
-let matchQuantity = []; */
-
-/*function finalMatch (arrayOfChosenClick) {
->>>>>>> feature-katherine-valcarce
-      if (arrayOfChosenClick.length == 2) {
-          if(arrayOfChosenClick[0].id == arrayOfChosenClick[1].id) {
-            arrayOfChosenClick [0].matched = true;
-            arrayOfChosenClick [1].matched = true;
-            matchQuantity++;
-            if (matchQuantity == 9){
-              //containerGrid.style.display = 'none';
-            }
-          }
-          else //(gridBoard())
-          containerGrid.style.display = 'none'
-              if (matchQuantity == 9){
-                alert(matchQuantity)
-              }
-          }
-      } else (gridBoard())
-          arrayOfChosenClick.length =0;                       
-      }
-        
-   return containerPlay;
-}; */
-
-
-
-
