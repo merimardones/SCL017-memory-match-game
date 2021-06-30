@@ -125,12 +125,12 @@ const play = () => {
                 containerGrid.style.display = "none";
                 finalGame.style.display = "block";
               }
-          }
+          
       } else (gridBoard())
       
           arrayOfChosenClick.length =0;                       
       }
-        
+   }
    return containerPlay;
 };
 
