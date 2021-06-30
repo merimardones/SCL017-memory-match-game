@@ -96,11 +96,11 @@ const play = () => {
   gridBoard(); 
   
   
-  function flipCardBack(cardData, imageCard){
-      imageCard.setAttribute("src", cardData.image); 
-      if (cardData.matched) {
-        return false;
-      } 
+  function flipCardBack(){
+     // imageCard.setAttribute("src", cardData.image); 
+     // if (cardData.matched) {
+     //   return false;
+     // } 
       
      //chosenClick.push(cardData);
 

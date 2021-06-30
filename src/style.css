@@ -104,7 +104,6 @@ body{
     box-shadow: 0 0 30px 20px rgb(255, 255, 255);
 }
 .finalGame{
-    /*background-color: rgb(74, 223, 29);*/
     padding: 10%;
 }
 .finalMsn{
@@ -138,14 +137,20 @@ body{
     top: 2%;
     left: 15%;
 }
-.botonReplay{
+.btnReplay{
     width: 14%;
     height: 10%;
     position: absolute;
     top: 85%;
     left: 40%;
 }
-
+footer{
+    font-size: 85%;
+    color: black;
+    position: absolute;
+    top: 95%;
+    left: 37%;
+}
 /*Ipad */
 @media only screen and (min-width:768px) and (max-width: 800px) { 
 
@@ -237,6 +242,8 @@ body{
         position: absolute;
         width: 70%;
         height: auto;
+
+
     }
 
     .cup{
