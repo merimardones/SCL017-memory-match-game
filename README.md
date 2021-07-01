@@ -102,3 +102,8 @@ Así es como luce nuestra versión para dispositivo móviles Android
 
 
 ## 5. Test de usabilidad
+
+imagen resumen test usabilidad
+
+(*) link video N°1
+(*) link video N°2: https://www.loom.com/share/8ebae1811f3243f7a8d9748954f18d6c

@@ -31,10 +31,27 @@ const play = () => {
   const containerPlay = document.createElement('div');
   containerPlay.className = 'containerPlay'; // container padre del juego
 
+  let audioElement = document.createElement('audio');
+  audioElement.setAttribute('src', 'Design/MusicaPokemon.mp3');
+  audioElement.setAttribute('autoplay', 'autoplay');
+  containerPlay.appendChild(audioElement);
+
+  let stopMusic = document.createElement('img');
+  stopMusic.className = "stopMusic";
+  stopMusic.id = "stopMusic";
+  stopMusic.src = "Design/StopMusic.png";
+  stopMusic.addEventListener('click', pauseMusic => {
+    audioElement.pause()
+     stopMusic.addEventListener('click', () => {
+      audioElement.play();
+      })
+    })
+  containerPlay.appendChild(stopMusic);
+
   const finalGame = document.createElement ('div');
   finalGame.className = "finalGame";
   containerPlay.appendChild(finalGame);
-  finalGame.style.display = "none";
+  finalGame.style.display = "none";     // Tercera pantalla - container padre
 
   const finalMsn = document.createElement ('p');
   finalMsn. className = "finalMsn";
@@ -70,6 +87,7 @@ const play = () => {
   const gridBoard = function() {
       
     containerGrid.innerHTML = "";
+
       for (let i = 0; i < cardsPair.length; i++) { //Recorre la data
 
         let cardShown = document.createElement("div");
