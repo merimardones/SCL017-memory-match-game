@@ -36,17 +36,6 @@ const play = () => {
   audioElement.setAttribute('autoplay', 'autoplay');
   containerPlay.appendChild(audioElement);
 
-  let stopMusic = document.createElement('img');
-  stopMusic.className = "stopMusic";
-  stopMusic.id = "stopMusic";
-  stopMusic.src = "Design/StopMusic.png";
-  stopMusic.addEventListener('click', pauseMusic => {
-    audioElement.pause()
-     stopMusic.addEventListener('click', () => {
-      audioElement.play();
-      })
-    })
-  containerPlay.appendChild(stopMusic);
 
   const finalGame = document.createElement ('div');
   finalGame.className = "finalGame";
