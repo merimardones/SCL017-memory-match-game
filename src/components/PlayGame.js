@@ -31,10 +31,16 @@ const play = () => {
   const containerPlay = document.createElement('div');
   containerPlay.className = 'containerPlay'; // container padre del juego
 
+  let audioElement = document.createElement('audio');
+  audioElement.setAttribute('src', 'Design/MusicaPokemon.mp3');
+  audioElement.setAttribute('autoplay', 'autoplay');
+  containerPlay.appendChild(audioElement);
+
+
   const finalGame = document.createElement ('div');
   finalGame.className = "finalGame";
   containerPlay.appendChild(finalGame);
-  finalGame.style.display = "none";
+  finalGame.style.display = "none";     // Tercera pantalla - container padre
 
   const finalMsn = document.createElement ('p');
   finalMsn. className = "finalMsn";
@@ -46,15 +52,15 @@ const play = () => {
   cup.src = "Design/copa1.png";
   finalGame.appendChild(cup);
 
-  const botonReplay = document.createElement("img");
-  botonReplay.className = "botonReplay";
-  botonReplay.src = "Design/buttonReplay.png";
-  botonReplay.addEventListener('click', () => {
+  const btnReplay = document.createElement("img");
+  btnReplay.className = "btnReplay";
+  btnReplay.src = "Design/buttonReplay.png";
+  btnReplay.addEventListener('click', () => {
         
       finalGame.style.display = 'none';
       document.getElementById('root').appendChild(play());
   })
-  finalGame.appendChild(botonReplay);
+  finalGame.appendChild(btnReplay);
 
   const streamer = document.createElement("img");
   streamer.className = "streamer";
@@ -70,6 +76,7 @@ const play = () => {
   const gridBoard = function() {
       
     containerGrid.innerHTML = "";
+
       for (let i = 0; i < cardsPair.length; i++) { //Recorre la data
 
         let cardShown = document.createElement("div");
@@ -96,17 +103,17 @@ const play = () => {
   gridBoard(); 
   
   
-  function flipCardBack(cardData, imageCard){
-      imageCard.setAttribute("src", cardData.image); 
-      if (cardData.matched) {
-        return false;
-      } 
+  function flipCardBack(){
+     // imageCard.setAttribute("src", cardData.image); 
+     // if (cardData.matched) {
+     //   return false;
+     // } 
       
      //chosenClick.push(cardData);
 
       setTimeout(function() {
         finalMatch (chosenClick);
-      }, 1500);
+      }, 1200);
     }
     //finalMatch (chosenClick);          
   

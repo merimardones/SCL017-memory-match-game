@@ -1,6 +1,5 @@
 import Starting from './App.js';
 
-
 describe('Starting', () => {
   it('should render without crashing', () => {
     const container = Starting();
