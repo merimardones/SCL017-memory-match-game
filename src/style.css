@@ -145,10 +145,12 @@ body{
     left: 40%;
 }
 footer{
-    font-size: 85%;
+    font-family: 'Play';
+    font-size: 15px; 
+    font-weight: bolder;
     color: black;
     position: absolute;
-    top: 95%;
+    top: 94%;
     left: 37%;
 }
 
@@ -199,6 +201,7 @@ footer{
     }
 
     .botonReplay{
+        font-family: 'Play', sans-serif;
         width: 40%;
         height: auto;
         position: absolute;

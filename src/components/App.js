@@ -30,7 +30,7 @@ const Starting = () => {
   subContainer.addEventListener('click', startBtn); 
   container.appendChild(subContainer); 
 
-  const footer = document.createElement("footer")
+  const footer = document.createElement('footer')
   footer.textContent= "© 2021 Laboratoria - Maria Agustina Mardones - Katherine Valcarce"
   footer.className = 'footer';
   container.appendChild(footer); 

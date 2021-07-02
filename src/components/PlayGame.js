@@ -103,7 +103,7 @@ const play = () => {
   gridBoard(); 
   
   
-  function flipCardBack(){
+function flipCardBack(){
      // imageCard.setAttribute("src", cardData.image); 
      // if (cardData.matched) {
      //   return false;
@@ -146,5 +146,12 @@ const play = () => {
 };
 
 
-export default play
-export {shuffle}
+export default play;
+export {shuffle};
+export {play};
+
+
+
+
+
+
