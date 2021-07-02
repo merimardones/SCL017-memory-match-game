@@ -1,8 +1,8 @@
-import App from './App.js';
+import Starting from './App.js';
 
-describe('App', () => {
+describe('Starting', () => {
   it('should render without crashing', () => {
-    const el = App();
-    expect(el instanceof HTMLElement).toBe(true);
+    const container = Starting();
+    expect(container instanceof HTMLElement).toBe(true);
   });
 });

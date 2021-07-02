@@ -1,0 +1,285 @@
+@import url('https://fonts.googleapis.com/css2?family=Play&display=swap');
+
+*{
+    margin: 0 ;
+    padding: 0;
+} 
+
+body{
+    height: 100vh;
+    background-image: url("./Design/background.png");
+    background-size: 65%;
+    background-repeat: no-repeat;
+    background-color: #cb000a;   
+    background-position:center;  
+    overflow: hidden;
+}
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.Logo {
+    background-image: url("./Design/memory\ dex\ pokemon.png");
+    padding: 10%;
+    background-size: contain;
+    background-repeat: no-repeat;  
+    position:absolute;
+    left: 40%;
+    top: 15%;    
+}
+
+.Pikachu {
+    background-image: url("./Design/pikachu.gif");
+    padding: 5%;
+    background-size: contain;
+    background-repeat: no-repeat;  
+    position:absolute;
+    left: 44%;
+    top: 40%;  
+}
+
+.start {
+    background-image: url("./Design/start.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 44%;
+    bottom: 32%;
+    width: 12%;
+    height: 10%;
+    cursor: pointer;
+}
+
+.containerPlay {
+    background-color: #d5e9f5;
+    border: 10px solid black;
+    border-radius: 50px;
+    width: 80%;
+    height: 86%;
+    padding: 2%;
+    background-position: center;
+    position:absolute;
+    top:1.5%;
+    left:8%;
+    cursor: url(./Design/manoAsh2.png),auto;
+}
+
+.containerGrid{
+    width: 100%;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    align-content: space-between;
+    flex-wrap:wrap;
+    flex-direction: row;
+    padding: 2%;
+    position: absolute;
+    top: 0.5%;
+    left: 1%;
+}
+
+.cardShown{
+    width: 16%;
+    height: 0%;
+    padding: 0%;
+    margin: 0 0 2% 0;
+    position: relative;
+    perspective: 1000px;
+}
+
+.cardBack, .frontCard {
+    width: 60%; 
+    height: 30%; 
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.7);
+    border-radius: 10%;
+    border: 4px solid #000092;
+    transition: transform 1s;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+}
+
+.cardBack:hover{
+    transform: scale(.97);
+    transition: transform 5s;
+    transition-duration: 1s;
+    box-shadow: 0 0 30px 20px rgb(255, 255, 255);
+}
+
+.finalGame{
+    padding: 10%;
+}
+
+.finalMsn{
+    font-family: 'Play', sans-serif;
+    color: white;
+    font-size: 300%;
+    font-weight:900;
+    text-align: center;
+    line-height: 150%;
+    white-space: pre-line;
+    background-color: #3fe56e;
+    border: 5px solid #c9ce1b;
+    border-radius: 10%;
+    position: absolute;
+    width: 65%;
+    height: 25%;
+    top: 2%;
+    left: 15%;
+}
+
+.cup{
+    width: 22%;
+    height: 60%;
+    position: absolute;
+    top: 25%;
+    left: 35%;
+}
+
+.streamer{
+    width: 70%;
+    height: 80%;
+    position: absolute;
+    top: 2%;
+    left: 15%;
+}
+
+.btnReplay{
+    width: 14%;
+    height: 10%;
+    position: absolute;
+    top: 85%;
+    left: 40%;
+}
+
+footer{
+    font-family: 'Play';
+    font-size: 15px; 
+    font-weight: bolder;
+    color: black;
+    position: absolute;
+    top: 94%;
+    left: 37%;
+}
+
+/*Ipad */
+@media only screen and (min-width:768px) and (max-width: 800px) { 
+
+    body{
+    background-color: #FE0065;
+    background-image: url('./Design/backgroundMobile.png');
+    background-size: 94%;
+    border: 4px solid white;
+    
+    }
+
+    .Logo{
+        padding: 24%;
+        position:absolute;
+        left: 26%;
+        top: 31%;
+    }
+
+    .Pikachu{
+        padding: 10%;
+        position:absolute;
+        top:51%;
+        left: 40%;
+    }
+
+    .start{
+        padding: 21%;
+        position: absolute;
+        top: 80%;
+        left: 14%;
+    }
+
+    .cardShown{
+        width: 25%;
+        height: auto;
+    }
+
+    .finalMsn{
+        width: 70%;
+        height: 18%;
+    }
+
+    .cup{
+        width: auto;
+        height: 50%;
+        position: absolute;
+        top: 25%;
+        left: 25%;
+    }
+
+    .btnReplay{
+        font-family: 'Play', sans-serif;
+        width: 40%;
+        height: auto;
+        position: absolute;
+        top: 80%;
+        left: 32%;
+    }
+}
+
+/* iPhone 6/7/8 */
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px){
+
+    body{
+        background-color: #585858;
+        background-image: url('./Design/backgroundMobile.png');
+        background-size: 105%;
+    }
+
+    .Logo{
+        padding: 26%;
+        position:absolute;
+        left: 24%;
+        top: 36%;
+    }
+
+    .Pikachu{
+        padding: 10%;
+        position:absolute;
+        top:51%;
+        left: 40%;
+    }
+
+    .start{
+        padding: 21%;
+        position: absolute;
+        top: 75%;
+        left: 14%;
+    }
+  
+    .cardShown{
+        width: 28%;
+        height: auto;
+    }
+
+    .finalMsn{
+        font-size: 180%;
+        width: 70%;
+        height: 18%;
+        position: absolute;
+        width: 70%;
+        height: auto;
+    }
+
+    .cup{
+        width: auto;
+        height: 50%;
+        position: absolute;
+        top: 25%;
+        left: 18%;
+    }
+
+    .btnReplay{
+        width: 30%;
+        height: auto;
+        position: absolute;
+        top: 80%;
+        left: 37%;
+    }
+ }

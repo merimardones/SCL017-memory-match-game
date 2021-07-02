@@ -1,26 +1,43 @@
-//
-// Para incluir los diferentes sets de cartas podemos _importar_ el archivo
-// JavasSript que contenga el `export` correspondiente...
-//
-// import pokemon from '../data/pokemon/pokemon.js';
-// console.log(pokemon);
-//
-// O alternativamente podríamos cargar el JSON de forma asíncrona usando
-// `fetch` en el momento que consideremos necesario.
-//
-// fetch('./data/pokemon/pokemon.json')
-//   .then(resp => resp.json())
-//   .then(console.log)
-//   .catch(console.error);
-//
+import play from './PlayGame.js';
 
-const App = () => {
-  const el = document.createElement('div');
+const Starting = () => {
 
-  el.className = 'App';
-  el.textContent = 'Hola mundo!';
+// evento para ocultar el container 
+        const startBtn = () => {
+        
+        document.getElementsByClassName('container');
+        container.style.display = 'none';
+        document.getElementById('root').appendChild(play());
+        }
+        
+  // container padre
+  const container = document.createElement('div');
+  container.className = 'container'; 
 
-  return el;
+  // div hijo de container que almacena el logo
+  const containerLogo = document.createElement('div');
+  containerLogo.className = 'Logo';
+  container.appendChild(containerLogo); 
+
+  // div hijo de container que almacena el gif
+  const containerPikachu = document.createElement('div');
+  containerPikachu.className = 'Pikachu';
+  container.appendChild(containerPikachu); 
+
+  // div hijo de container que almacena el botón start
+  const subContainer = document.createElement('div');
+  subContainer.className = 'start';
+  subContainer.addEventListener('click', startBtn); 
+  container.appendChild(subContainer); 
+
+  const footer = document.createElement('footer')
+  footer.textContent= "© 2021 Laboratoria - Maria Agustina Mardones - Katherine Valcarce"
+  footer.className = 'footer';
+  container.appendChild(footer); 
+
+  
+  return container;
 };
+  
 
-export default App;
+export default Starting;
