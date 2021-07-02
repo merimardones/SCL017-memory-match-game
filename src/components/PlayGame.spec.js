@@ -1,8 +1,4 @@
 import {shuffle, play} from './PlayGame';
-import {chosenClick} from './PlayGame';
-
-
-
 
 describe('Shuffle', () => {
     it('should shuffle the cards', () => {
@@ -19,7 +15,7 @@ describe('Play', () => {
     it('should be a function', () => {
       expect(typeof play).toBe('function');
     });
-  });
+});
 
 
 

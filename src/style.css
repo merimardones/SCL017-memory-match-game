@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Play&display=swap');
+
 *{
     margin: 0 ;
     padding: 0;
@@ -50,6 +51,7 @@ body{
     height: 10%;
     cursor: pointer;
 }
+
 .containerPlay {
     background-color: #d5e9f5;
     border: 10px solid black;
@@ -76,8 +78,8 @@ body{
     position: absolute;
     top: 0.5%;
     left: 1%;
-    
 }
+
 .cardShown{
     width: 16%;
     height: 0%;
@@ -85,8 +87,8 @@ body{
     margin: 0 0 2% 0;
     position: relative;
     perspective: 1000px;
-
 }
+
 .cardBack, .frontCard {
     width: 60%; 
     height: 30%; 
@@ -97,15 +99,18 @@ body{
     backface-visibility: hidden;
     transform-style: preserve-3d;
 }
+
 .cardBack:hover{
     transform: scale(.97);
     transition: transform 5s;
     transition-duration: 1s;
     box-shadow: 0 0 30px 20px rgb(255, 255, 255);
 }
+
 .finalGame{
     padding: 10%;
 }
+
 .finalMsn{
     font-family: 'Play', sans-serif;
     color: white;
@@ -123,6 +128,7 @@ body{
     top: 2%;
     left: 15%;
 }
+
 .cup{
     width: 22%;
     height: 60%;
@@ -130,6 +136,7 @@ body{
     top: 25%;
     left: 35%;
 }
+
 .streamer{
     width: 70%;
     height: 80%;
@@ -137,6 +144,7 @@ body{
     top: 2%;
     left: 15%;
 }
+
 .btnReplay{
     width: 14%;
     height: 10%;
@@ -144,6 +152,7 @@ body{
     top: 85%;
     left: 40%;
 }
+
 footer{
     font-family: 'Play';
     font-size: 15px; 
@@ -186,10 +195,14 @@ footer{
         left: 14%;
     }
 
+    .cardShown{
+        width: 25%;
+        height: auto;
+    }
+
     .finalMsn{
         width: 70%;
         height: 18%;
-
     }
 
     .cup{
@@ -200,7 +213,7 @@ footer{
         left: 25%;
     }
 
-    .botonReplay{
+    .btnReplay{
         font-family: 'Play', sans-serif;
         width: 40%;
         height: auto;
@@ -239,6 +252,12 @@ footer{
         top: 75%;
         left: 14%;
     }
+  
+    .cardShown{
+        width: 28%;
+        height: auto;
+    }
+
     .finalMsn{
         font-size: 180%;
         width: 70%;
@@ -246,8 +265,6 @@ footer{
         position: absolute;
         width: 70%;
         height: auto;
-
-
     }
 
     .cup{
@@ -258,11 +275,11 @@ footer{
         left: 18%;
     }
 
-    .botonReplay{
-        width: 50%;
+    .btnReplay{
+        width: 30%;
         height: auto;
         position: absolute;
         top: 80%;
-        left: 28%;
+        left: 37%;
     }
  }
