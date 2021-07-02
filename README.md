@@ -103,7 +103,11 @@ Así es como luce nuestra versión para dispositivo móviles Android
 
 ## 5. Test de usabilidad
 
-imagen resumen test usabilidad
+Realizamos dos test de usabilidad. La primera prueba arrojó algunos errores que nos indicó la usuaria, los cuales correspondían al tiempo excedido en que se demoró en relizar los match de cartas. Este problema surgía por un error en el girar de cada imagen y en el tiempo muy breve que tenía la primera carta clickeada para esperar a que se seleccionara una segunda carta. 
 
-(*) link video N°1
-(*) link video N°2: https://www.loom.com/share/8ebae1811f3243f7a8d9748954f18d6c
+Enlace a video de usuaria N°1: https://www.loom.com/share/0b42fc7a5ebb40bc8535ad12cca57c6b
+
+Iteramos el código según el feedback de la primera usuaria e hicimos una segunda prueba con los cambios realizados. 
+En este segundo test de usabilidad vemos que el juego es fluido y el tiempo de espera de cada carta es igual para todas. El usuario de este segundo test nos indica que le fue entretenido probar nuestro *memory game* y que sintió correcta la experiencia de uso con las expectativas que él tenía.
+
+Enlace a video de usuario N°2: https://www.loom.com/share/8ebae1811f3243f7a8d9748954f18d6c
