@@ -1,4 +1,5 @@
 import {shuffle, play} from './PlayGame';
+import {chosenClick} from './PlayGame';
 
 
 
@@ -14,6 +15,9 @@ describe('Play', () => {
     it('should render without crashing', () => {
       const content = play();
       expect(content instanceof HTMLElement).toBe(true);
+    });
+    it('should be a function', () => {
+      expect(typeof play).toBe('function');
     });
   });
 

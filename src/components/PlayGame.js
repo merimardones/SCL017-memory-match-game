@@ -149,6 +149,7 @@ function flipCardBack(){
 export default play;
 export {shuffle};
 export {play};
+export {chosenClick};
 
 
 
